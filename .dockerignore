@@ -1,0 +1,11 @@
+# .dockerignore
+airflow/logs
+airflow/dags      # если они копируются внешним volume, их не надо тащить в билд
+data/
+superset/         # метаданные и .db-файлы
+# не тащим Git-мусор, логи, CSV-файлы и т.п.
+.git
+**/__pycache__
+data/*
+superset_home/*
+*.log

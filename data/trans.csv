@@ -1,0 +1,222 @@
+transaction_id,client_id,datetime,amount,currency,merchant,transaction_type,ip_address,category,country_code,region,device_type,session_id,channel,recipient_id,transaction_purpose
+f2e4a6b8-c0d2-4e6f-8a0c-2e4a6b8c0d2e,client_35,2025-04-12 16:23:45,75432.89,USD,null,p2p,104.23.156.78,p2p,US,New York,smartphone,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,mobile_app,client_27,debt
+a1b2c3d4-e5f6-7g8h-9i0j-1k2l3m4n5o6p,client_219,2025-03-02 10:15:32,2450.75,CNY,Alipay,deposit,58.215.87.126,investment,CN,Shanghai,smartphone,b2c3d4e5-f6g7-8h9i-0j1k-2l3m4n5o6p7,mobile_app,null,null
+c5d6e7f8-g9h0-i1j2-k3l4-m5n6o7p8q9r0,client_513,2025-02-15 14:45:20,1250.00,RUB,Sber,withdrawal,95.168.124.37,utilities,RU,Moscow,PC,d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9,web,null,null
+e7f8g9h0-i1j2-k3l4-m5n6-o7p8q9r0s1t2,client_19,2025-04-26 20:10:15,28750.50,EUR,null,p2p,84.125.63.198,p2p,DE,Berlin,smartphone,f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1,mobile_app,client_33,shared_expense
+g9h0i1j2-k3l4-m5n6-o7p8-q9r0s1t2u3v4,client_647,2025-03-15 09:30:42,120500.25,USD,Amazon,deposit,45.89.126.74,investment,US,Los Angeles,tablet,h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3,web,null,null
+i1j2k3l4-m5n6-o7p8-q9r0-s1t2u3v4w5x6,client_351,2025-04-05 18:20:10,85250.75,CNY,WeChat Pay,deposit,112.45.78.96,investment,CN,Beijing,smartphone,j0k1l2m3-n4o5-p6q7-r8s9-t0u1v2w3x4y5,mobile_app,null,null
+k3l4m5n6-o7p8-q9r0-s1t2-u3v4w5x6y7z8,client_127,2025-02-08 12:35:28,850.50,RUB,Ozon,withdrawal,178.96.45.23,retail,RU,St. Petersburg,smartphone,l2m3n4o5-p6q7-r8s9-t0u1-v2w3x4y5z6a7,mobile_app,null,null
+m5n6o7p8-q9r0-s1t2-u3v4-w5x6y7z8a9b0,client_42,2025-04-19 21:45:33,1250.00,EUR,null,p2p,62.145.87.32,p2p,FR,Paris,smartphone,n4o5p6q7-r8s9-t0u1-v2w3-x4y5z6a7b8c9,mobile_app,client_24,gift
+o7p8q9r0-s1t2-u3v4-w5x6-y7z8a9b0c1d2,client_733,2025-03-09 15:20:18,3250.45,RUB,Wildberries,deposit,91.78.45.63,retail,RU,Moscow,tablet,p6q7r8s9-t0u1-v2w3-x4y5-z6a7b8c9d0e1,web,null,null
+q9r0s1t2-u3v4-w5x6-y7z8-a9b0c1d2e3f4,client_105,2025-04-27 11:05:22,2150.30,USD,Walmart,withdrawal,38.126.74.95,retail,US,Chicago,smartphone,r8s9t0u1-v2w3-x4y5-z6a7-b8c9d0e1f2g3,mobile_app,null,null
+s1t2u3v4-w5x6-y7z8-a9b0-c1d2e3f4g5h6,client_571,2025-02-22 17:40:15,98500.00,JPY,null,p2p,125.63.89.47,p2p,JP,Tokyo,smartphone,t0u1v2w3-x4y5-z6a7-b8c9-d0e1f2g3h4i5,mobile_app,client_615,debt
+u3v4w5x6-y7z8-a9b0-c1d2-e3f4g5h6i7j8,client_87,2025-03-30 08:15:40,45250.75,EUR,Zalando,deposit,78.45.126.93,retail,DE,Munich,tablet,v2w3x4y5-z6a7-b8c9-d0e1-f2g3h4i5j6k7,web,null,null
+w5x6y7z8-a9b0-c1d2-e3f4-g5h6i7j8k9l0,client_439,2025-04-13 19:30:25,150000.50,USD,null,p2p,56.93.78.41,p2p,US,New York,smartphone,x4y5z6a7-b8c9-d0e1-f2g3-h4i5j6k7l8m9,mobile_app,client_351,debt
+y7z8a9b0-c1d2-e3f4-g5h6-i7j8k9l0m1n2,client_295,2025-02-16 14:50:33,5250.25,RUB,Tinkoff,withdrawal,104.56.78.23,utilities,RU,Novosibirsk,PC,z6a7b8c9-d0e1-f2g3-h4i5-j6k7l8m9n0o1,POS,null,null
+a9b0c1d2-e3f4-g5h6-i7j8-k9l0m1n2o3p4,client_11,2025-03-23 12:25:18,1850.00,USD,Uber,deposit,45.78.126.35,travel,US,Los Angeles,smartphone,b8c9d0e1-f2g3-h4i5-j6k7-l8m9n0o1p2q3,mobile_app,null,null
+c1d2e3f4-g5h6-i7j8-k9l0-m1n2o3p4q5r6,client_747,2025-04-06 22:10:45,175000.75,CNY,null,p2p,112.35.89.47,p2p,CN,Shanghai,smartphone,d0e1f2g3-h4i5-j6k7-l8m9-n0o1p2q3r4s5,mobile_app,client_615,debt
+e3f4g5h6-i7j8-k9l0-m1n2-o3p4q5r6s7t8,client_63,2025-02-09 11:40:20,950.50,EUR,Carrefour,withdrawal,78.45.63.91,utilities,FR,Paris,tablet,f2g3h4i5-j6k7-l8m9-n0o1-p2q3r4s5t6u7,web,null,null
+g5h6i7j8-k9l0-m1n2-o3p4-q5r6s7t8u9v0,client_183,2025-03-16 16:55:35,3750.25,RUB,null,p2p,95.78.41.63,p2p,RU,Moscow,smartphone,h4i5j6k7-l8m9-n0o1-p2q3-r4s5t6u7v8w9,mobile_app,client_315,shared_expense
+i7j8k9l0-m1n2-o3p4-q5r6-s7t8u9v0w1x2,client_313,2025-04-20 09:30:15,2150.00,USD,Amazon,deposit,38.95.126.74,retail,US,Chicago,smartphone,j6k7l8m9-n0o1-p2q3-r4s5-t6u7v8w9x0y1,mobile_app,null,null
+k9l0m1n2-o3p4-q5r6-s7t8-u9v0w1x2y3z4,client_401,2025-02-23 13:45:28,1850.50,EUR,null,p2p,84.56.23.78,p2p,DE,Berlin,smartphone,l8m9n0o1-p2q3-r4s5-t6u7-v8w9x0y1z2a3,mobile_app,client_445,gift
+m1n2o3p4-q5r6-s7t8-u9v0-w1x2y3z4a5b6,client_5,2025-03-31 18:20:42,250000.25,CNY,Alipay,deposit,125.63.89.41,investment,CN,Beijing,tablet,n0o1p2q3-r4s5-t6u7-v8w9-x0y1z2a3b4c5,web,null,null
+o3p4q5r6-s7t8-u9v0-w1x2-y3z4a5b6c7d8,client_675,2025-04-14 21:15:10,195000.75,USD,null,p2p,45.78.93.56,p2p,US,New York,smartphone,p2q3r4s5-t6u7-v8w9-x0y1-z2a3b4c5d6e7,mobile_app,client_533,debt
+q5r6s7t8-u9v0-w1x2-y3z4-a5b6c7d8e9f0,client_241,2025-02-17 15:30:33,4250.00,RUB,Sber,withdrawal,91.45.78.23,utilities,RU,St. Petersburg,PC,r4s5t6u7-v8w9-x0y1-z2a3-b4c5d6e7f8g9,POS,null,null
+s7t8u9v0-w1x2-y3z4-a5b6-c7d8e9f0g1h2,client_129,2025-03-24 10:45:18,2850.50,EUR,Auchan,deposit,62.91.45.78,retail,FR,Paris,smartphone,t6u7v8w9-x0y1-z2a3-b4c5-d6e7f8g9h0i1,mobile_app,null,null
+u9v0w1x2-y3z4-a5b6-c7d8-e9f0g1h2i3j4,client_483,2025-04-07 14:20:45,135000.25,CNY,null,p2p,112.56.78.41,p2p,CN,Shanghai,smartphone,v8w9x0y1-z2a3-b4c5-d6e7-f8g9h0i1j2k3,mobile_app,client_219,debt
+w1x2y3z4-a5b6-c7d8-e9f0-g1h2i3j4k5l6,client_27,2025-02-10 08:35:20,1250.50,USD,Walmart,withdrawal,38.91.45.78,retail,US,Los Angeles,tablet,x0y1z2a3-b4c5-d6e7-f8g9-h0i1j2k3l4m5,web,null,null
+y3z4a5b6-c7d8-e9f0-g1h2-i3j4k5l6m7n8,client_367,2025-03-17 19:50:35,85000.00,EUR,null,p2p,84.38.91.45,p2p,DE,Munich,smartphone,z2a3b4c5-d6e7-f8g9-h0i1-j2k3l4m5n6o7,mobile_app,client_411,shared_expense
+a5b6c7d8-e9f0-g1h2-i3j4-k5l6m7n8o9p0,client_585,2025-04-21 12:15:15,3250.75,RUB,Wildberries,deposit,95.38.91.45,retail,RU,Moscow,smartphone,b4c5d6e7-f8g9-h0i1-j2k3-l4m5n6o7p8q9,mobile_app,null,null
+c7d8e9f0-g1h2-i3j4-k5l6-m7n8o9p0q1r2,client_93,2025-02-24 16:40:28,1550.00,USD,null,p2p,45.95.38.91,p2p,US,Chicago,smartphone,d6e7f8g9-h0i1-j2k3-l4m5-n6o7p8q9r0s1,mobile_app,client_15,gift
+e9f0g1h2-i3j4-k5l6-m7n8-o9p0q1r2s3t4,client_461,2025-04-01 21:25:42,165000.25,JPY,null,p2p,125.45.95.38,p2p,JP,Tokyo,smartphone,f8g9h0i1-j2k3-l4m5-n6o7-p8q9r0s1t2u3,mobile_app,client_373,debt
+g1h2i3j4-k5l6-m7n8-o9p0-q1r2s3t4u5v6,client_217,2025-03-25 14:50:18,4850.50,EUR,Zalando,deposit,84.45.95.38,retail,DE,Berlin,tablet,h0i1j2k3-l4m5-n6o7-p8q9-r0s1t2u3v4w5,web,null,null
+i3j4k5l6-m7n8-o9p0-q1r2-s3t4u5v6w7x8,client_55,2025-02-18 09:05:33,1950.00,RUB,Ozon,withdrawal,91.84.45.95,retail,RU,Novosibirsk,PC,j2k3l4m5-n6o7-p8q9-r0s1-t2u3v4w5x6y7,POS,null,null
+k5l6m7n8-o9p0-q1r2-s3t4-u5v6w7x8y9z0,client_821,2025-04-08 17:30:45,2350.75,USD,null,p2p,38.91.84.45,p2p,US,New York,smartphone,l4m5n6o7-p8q9-r0s1-t2u3-v4w5x6y7z8a9,mobile_app,client_959,shared_expense
+m7n8o9p0-q1r2-s3t4-u5v6-w7x8y9z0a1b2,client_153,2025-03-18 11:15:20,95000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,n6o7p8q9-r0s1-t2u3-v4w5-x6y7z8a9b0c1,mobile_app,null,null
+o9p0q1r2-s3t4-u5v6-w7x8-y9z0a1b2c3d4,client_967,2025-04-22 15:40:35,185000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,p8q9r0s1-t2u3-v4w5-x6y7-z8a9b0c1d2e3,mobile_app,client_747,debt
+q1r2s3t4-u5v6-w7x8-y9z0-a1b2c3d4e5f6,client_335,2025-02-11 10:25:28,2050.00,EUR,Carrefour,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,r0s1t2u3-v4w5-x6y7-z8a9-b0c1d2e3f4g5,web,null,null
+s3t4u5v6-w7x8-y9z0-a1b2-c3d4e5f6g7h8,client_613,2025-03-26 20:00:42,3750.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,t2u3v4w5-x6y7-z8a9-b0c1-d2e3f4g5h6i7,mobile_app,client_537,shared_expense
+u5v6w7x8-y9z0-a1b2-c3d4-e5f6g7h8i9j0,client_207,2025-04-15 13:35:15,215000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,v4w5x6y7-z8a9-b0c1-d2e3-f4g5h6i7j8k9,mobile_app,null,null
+w7x8y9z0-a1b2-c3d4-e5f6-g7h8i9j0k1l2,client_47,2025-02-25 08:50:28,1750.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,x6y7z8a9-b0c1-d2e3-f4g5-h6i7j8k9l0m1,mobile_app,client_79,gift
+y9z0a1b2-c3d4-e5f6-g7h8-i9j0k1l2m3n4,client_307,2025-04-02 18:15:42,145000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,z8a9b0c1-d2e3-f4g5-h6i7-j8k9l0m1n2o3,mobile_app,client_219,debt
+a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6,client_559,2025-03-19 11:40:18,3250.50,EUR,Aldi,deposit,84.125.38.112,retail,DE,Berlin,tablet,b0c1d2e3-f4g5-h6i7-j8k9-l0m1n2o3p4q5,web,null,null
+c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8,client_173,2025-02-19 16:25:33,2150.00,RUB,Sber,withdrawal,91.84.125.38,utilities,RU,St. Petersburg,PC,d2e3f4g5-h6i7-j8k9-l0m1-n2o3p4q5r6s7,POS,null,null
+e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0,client_693,2025-04-09 21:00:45,2650.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,f4g5h6i7-j8k9-l0m1-n2o3-p4q5r6s7t8u9,mobile_app,client_825,shared_expense
+g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2,client_263,2025-03-27 14:35:20,125000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,h6i7j8k9-l0m1-n2o3-p4q5-r6s7t8u9v0w1,mobile_app,null,null
+i9j0k1l2-m3n4-o5p6-q7r8-s9t0u1v2w3x4,client_417,2025-04-23 09:10:35,155000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,j8k9l0m1-n2o3-p4q5-r6s7-t8u9v0w1x2y3,mobile_app,client_351,debt
+k1l2m3n4-o5p6-q7r8-s9t0-u1v2w3x4y5z6,client_75,2025-02-12 13:45:28,1850.00,EUR,Auchan,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,l0m1n2o3-p4q5-r6s7-t8u9-v0w1x2y3z4a5,web,null,null
+m3n4o5p6-q7r8-s9t0-u1v2-w3x4y5z6a7b8,client_931,2025-03-20 18:20:42,4250.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,n2o3p4q5-r6s7-t8u9-v0w1-x2y3z4a5b6c7,mobile_app,client_797,shared_expense
+o5p6q7r8-s9t0-u1v2-w3x4-y5z6a7b8c9d0,client_141,2025-04-16 12:55:15,175000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,p4q5r6s7-t8u9-v0w1-x2y3-z4a5b6c7d8e9,mobile_app,null,null
+q7r8s9t0-u1v2-w3x4-y5z6-a7b8c9d0e1f2,client_385,2025-02-26 07:30:28,2250.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,r6s7t8u9-v0w1-x2y3-z4a5-b6c7d8e9f0g1,mobile_app,client_343,gift
+s9t0u1v2-w3x4-y5z6-a7b8-c9d0e1f2g3h4,client_659,2025-04-03 17:05:42,165000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,t8u9v0w1-x2y3-z4a5-b6c7-d8e9f0g1h2i3,mobile_app,client_571,debt
+u1v2w3x4-y5z6-a7b8-c9d0-e1f2g3h4i5j6,client_229,2025-03-21 10:40:18,3750.50,EUR,Zalando,deposit,84.125.38.112,retail,DE,Munich,tablet,v0w1x2y3-z4a5-b6c7-d8e9-f0g1h2i3j4k5,web,null,null
+w3x4y5z6-a7b8-c9d0-e1f2-g3h4i5j6k7l8,client_471,2025-02-20 15:15:33,1950.00,RUB,Ozon,withdrawal,91.84.125.38,retail,RU,Novosibirsk,PC,x2y3z4a5-b6c7-d8e9-f0g1-h2i3j4k5l6m7,POS,null,null
+y5z6a7b8-c9d0-e1f2-g3h4-i5j6k7l8m9n0,client_107,2025-04-10 19:50:45,2850.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,z4a5b6c7-d8e9-f0g1-h2i3-j4k5l6m7n8o9,mobile_app,client_23,shared_expense
+a7b8c9d0-e1f2-g3h4-i5j6-k7l8m9n0o1p2,client_835,2025-03-28 13:25:20,185000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,b6c7d8e9-f0g1-h2i3-j4k5-l6m7n8o9p0q1,mobile_app,null,null
+c9d0e1f2-g3h4-i5j6-k7l8-m9n0o1p2q3r4,client_351,2025-04-24 08:00:35,195000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,d8e9f0g1-h2i3-j4k5-l6m7-n8o9p0q1r2s3,mobile_app,client_439,debt
+e1f2g3h4-i5j6-k7l8-m9n0-o1p2q3r4s5t6,client_251,2025-02-13 12:35:28,2050.00,EUR,Carrefour,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,f0g1h2i3-j4k5-l6m7-n8o9-p0q1r2s3t4u5,web,null,null
+g3h4i5j6-k7l8-m9n0-o1p2-q3r4s5t6u7v8,client_577,2025-03-22 17:10:42,3850.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,h2i3j4k5-l6m7-n8o9-p0q1-r2s3t4u5v6w7,mobile_app,client_445,shared_expense
+i5j6k7l8-m9n0-o1p2-q3r4-s5t6u7v8w9x0,client_197,2025-04-17 11:45:15,145000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,j4k5l6m7-n8o9-p0q1-r2s3-t4u5v6w7x8y9,mobile_app,null,null
+k7l8m9n0-o1p2-q3r4-s5t6-u7v8w9x0y1z2,client_139,2025-02-27 06:20:28,1750.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,l6m7n8o9-p0q1-r2s3-t4u5-v6w7x8y9z0a1,mobile_app,client_183,gift
+m9n0o1p2-q3r4-s5t6-u7v8-w9x0y1z2a3b4,client_901,2025-04-04 15:55:42,155000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,n8o9p0q1-r2s3-t4u5-v6w7-x8y9z0a1b2c3,mobile_app,client_747,debt
+o1p2q3r4-s5t6-u7v8-w9x0-y1z2a3b4c5d6,client_373,2025-03-29 09:30:18,4250.50,EUR,Aldi,deposit,84.125.38.112,retail,DE,Berlin,tablet,p0q1r2s3-t4u5-v6w7-x8y9-z0a1b2c3d4e5,web,null,null
+q3r4s5t6-u7v8-w9x0-y1z2-a3b4c5d6e7f8,client_285,2025-02-21 14:05:33,1850.00,RUB,Sber,withdrawal,91.84.125.38,utilities,RU,St. Petersburg,PC,r2s3t4u5-v6w7-x8y9-z0a1-b2c3d4e5f6g7,POS,null,null
+s5t6u7v8-w9x0-y1z2-a3b4-c5d6e7f8g9h0,client_537,2025-04-11 18:40:45,2950.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,t4u5v6w7-x8y9-z0a1-b2c3-d4e5f6g7h8i9,mobile_app,client_613,shared_expense
+u7v8w9x0-y1z2-a3b4-c5d6-e7f8g9h0i1j2,client_169,2025-03-30 12:15:20,115000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,v6w7x8y9-z0a1-b2c3-d4e5-f6g7h8i9j0k1,mobile_app,null,null
+w9x0y1z2-a3b4-c5d6-e7f8-g9h0i1j2k3l4,client_615,2025-04-25 06:50:35,175000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,x8y9z0a1-b2c3-d4e5-f6g7-h8i9j0k1l2m3,mobile_app,client_967,debt
+y1z2a3b4-c5d6-e7f8-g9h0-i1j2k3l4m5n6,client_33,2025-02-14 11:25:28,1950.00,EUR,Auchan,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,z0a1b2c3-d4e5-f6g7-h8i9-j0k1l2m3n4o5,web,null,null
+a3b4c5d6-e7f8-g9h0-i1j2-k3l4m5n6o7p8,client_779,2025-03-23 16:00:42,3650.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,b2c3d4e5-f6g7-h8i9-j0k1-l2m3n4o5p6q7,mobile_app,client_865,shared_expense
+c5d6e7f8-g9h0-i1j2-k3l4-m5n6o7p8q9r0,client_97,2025-04-18 10:35:15,135000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9,mobile_app,null,null
+e7f8g9h0-i1j2-k3l4-m5n6-o7p8q9r0s1t2,client_445,2025-02-28 05:10:28,2150.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1,mobile_app,client_401,gift
+g9h0i1j2-k3l4-m5n6-o7p8-q9r0s1t2u3v4,client_715,2025-04-05 14:45:42,185000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3,mobile_app,client_483,debt
+i1j2k3l4-m5n6-o7p8-q9r0-s1t2u3v4w5x6,client_295,2025-03-31 08:20:18,4750.50,EUR,Zalando,deposit,84.125.38.112,retail,DE,Munich,tablet,j0k1l2m3-n4o5-p6q7-r8s9-t0u1v2w3x4y5,web,null,null
+k3l4m5n6-o7p8-q9r0-s1t2-u3v4w5x6y7z8,client_571,2025-02-22 12:55:33,2250.00,RUB,Ozon,withdrawal,91.84.125.38,retail,RU,Novosibirsk,PC,l2m3n4o5-p6q7-r8s9-t0u1-v2w3x4y5z6a7,POS,null,null
+m5n6o7p8-q9r0-s1t2-u3v4-w5x6y7z8a9b0,client_219,2025-04-12 17:30:45,3050.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,n4o5p6q7-r8s9-t0u1-v2w3-x4y5z6a7b8c9,mobile_app,client_307,shared_expense
+o7p8q9r0-s1t2-u3v4-w5x6-y7z8a9b0c1d2,client_439,2025-04-01 11:05:20,165000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,p6q7r8s9-t0u1-v2w3-x4y5-z6a7b8c9d0e1,mobile_app,null,null
+q9r0s1t2-u3v4-w5x6-y7z8-a9b0c1d2e3f4,client_27,2025-04-26 05:40:35,195000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,r8s9t0u1-v2w3-x4y5-z6a7-b8c9d0e1f2g3,mobile_app,client_35,debt
+s1t2u3v4-w5x6-y7z8-a9b0-c1d2e3f4g5h6,client_153,2025-02-15 10:15:28,1850.00,EUR,Carrefour,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,t0u1v2w3-x4y5-z6a7-b8c9-d0e1f2g3h4i5,web,null,null
+u3v4w5x6-y7z8-a9b0-c1d2-e3f4g5h6i7j8,client_367,2025-03-24 14:50:42,3550.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,v2w3x4y5-z6a7-b8c9-d0e1-f2g3h4i5j6k7,mobile_app,client_183,shared_expense
+w5x6y7z8-a9b0-c1d2-e3f4-g5h6i7j8k9l0,client_585,2025-04-19 09:25:15,155000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,x4y5z6a7-b8c9-d0e1-f2g3-h4i5j6k7l8m9,mobile_app,null,null
+y7z8a9b0-c1d2-e3f4-g5h6-i7j8k9l0m1n2,client_93,2025-03-01 04:00:28,1650.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,z6a7b8c9-d0e1-f2g3-h4i5-j6k7l8m9n0o1,mobile_app,client_15,gift
+a9b0c1d2-e3f4-g5h6-i7j8-k9l0m1n2o3p4,client_461,2025-04-06 13:35:42,175000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,b8c9d0e1-f2g3-h4i5-j6k7-l8m9n0o1p2q3,mobile_app,client_373,debt
+c1d2e3f4-g5h6-i7j8-k9l0-m1n2o3p4q5r6,client_217,2025-03-25 07:10:18,4250.50,EUR,Aldi,deposit,84.125.38.112,retail,DE,Berlin,tablet,d0e1f2g3-h4i5-j6k7-l8m9-n0o1p2q3r4s5,web,null,null
+e3f4g5h6-i7j8-k9l0-m1n2-o3p4q5r6s7t8,client_55,2025-02-23 11:45:33,2350.00,RUB,Sber,withdrawal,91.84.125.38,utilities,RU,St. Petersburg,PC,f2g3h4i5-j6k7-l8m9-n0o1-p2q3r4s5t6u7,POS,null,null
+g5h6i7j8-k9l0-m1n2-o3p4-q5r6s7t8u9v0,client_821,2025-04-13 16:20:45,3150.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,h4i5j6k7-l8m9-n0o1-p2q3-r4s5t6u7v8w9,mobile_app,client_959,shared_expense
+i7j8k9l0-m1n2-o3p4-q5r6-s7t8u9v0w1x2,client_153,2025-04-02 09:55:20,145000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,j6k7l8m9-n0o1-p2q3-r4s5-t6u7v8w9x0y1,mobile_app,null,null
+k9l0m1n2-o3p4-q5r6-s7t8-u9v0w1x2y3z4,client_967,2025-04-27 04:30:35,165000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,l8m9n0o1-p2q3-r4s5-t6u7-v8w9x0y1z2a3,mobile_app,client_747,debt
+m1n2o3p4-q5r6-s7t8-u9v0-w1x2y3z4a5b6,client_335,2025-02-16 09:05:28,2050.00,EUR,Auchan,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,n0o1p2q3-r4s5-t6u7-v8w9-x0y1z2a3b4c5,web,null,null
+o3p4q5r6-s7t8-u9v0-w1x2-y3z4a5b6c7d8,client_613,2025-03-26 13:40:42,3950.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,p2q3r4s5-t6u7-v8w9-x0y1-z2a3b4c5d6e7,mobile_app,client_537,shared_expense
+q5r6s7t8-u9v0-w1x2-y3z4-a5b6c7d8e9f0,client_207,2025-04-20 08:15:15,135000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,r4s5t6u7-v8w9-x0y1-z2a3-b4c5d6e7f8g9,mobile_app,null,null
+s7t8u9v0-w1x2-y3z4-a5b6-c7d8e9f0g1h2,client_47,2025-03-02 02:50:28,1550.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,t6u7v8w9-x0y1-z2a3-b4c5-d6e7f8g9h0i1,mobile_app,client_79,gift
+u9v0w1x2-y3z4-a5b6-c7d8-e9f0g1h2i3j4,client_307,2025-04-07 12:25:42,195000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,v8w9x0y1-z2a3-b4c5-d6e7-f8g9h0i1j2k3,mobile_app,client_219,debt
+w1x2y3z4-a5b6-c7d8-e9f0-g1h2i3j4k5l6,client_559,2025-03-27 06:00:18,4750.50,EUR,Zalando,deposit,84.125.38.112,retail,DE,Munich,tablet,x0y1z2a3-b4c5-d6e7-f8g9-h0i1j2k3l4m5,web,null,null
+y3z4a5b6-c7d8-e9f0-g1h2-i3j4k5l6m7n8,client_173,2025-02-24 10:35:33,1950.00,RUB,Ozon,withdrawal,91.84.125.38,retail,RU,Novosibirsk,PC,z2a3b4c5-d6e7-f8g9-h0i1-j2k3l4m5n6o7,POS,null,null
+a5b6c7d8-e9f0-g1h2-i3j4-k5l6m7n8o9p0,client_693,2025-04-14 15:10:45,2850.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,b4c5d6e7-f8g9-h0i1-j2k3-l4m5n6o7p8q9,mobile_app,client_825,shared_expense
+c7d8e9f0-g1h2-i3j4-k5l6-m7n8o9p0q1r2,client_263,2025-04-03 08:45:20,125000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,d6e7f8g9-h0i1-j2k3-l4m5-n6o7p8q9r0s1,mobile_app,null,null
+e9f0g1h2-i3j4-k5l6-m7n8-o9p0q1r2s3t4,client_417,2025-04-28 03:20:35,155000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,f8g9h0i1-j2k3-l4m5-n6o7-p8q9r0s1t2u3,mobile_app,client_351,debt
+g1h2i3j4-k5l6-m7n8-o9p0-q1r2s3t4u5v6,client_75,2025-02-17 07:55:28,1850.00,EUR,Carrefour,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,h0i1j2k3-l4m5-n6o7-p8q9-r0s1t2u3v4w5,web,null,null
+i3j4k5l6-m7n8-o9p0-q1r2-s3t4u5v6w7x8,client_931,2025-03-28 12:30:42,3850.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,j2k3l4m5-n6o7-p8q9-r0s1-t2u3v4w5x6y7,mobile_app,client_797,shared_expense
+k5l6m7n8-o9p0-q1r2-s3t4-u5v6w7x8y9z0,client_141,2025-04-21 07:05:15,165000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,l4m5n6o7-p8q9-r0s1-t2u3-v4w5x6y7z8a9,mobile_app,null,null
+m7n8o9p0-q1r2-s3t4-u5v6-w7x8y9z0a1b2,client_385,2025-03-03 01:40:28,2250.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,n6o7p8q9-r0s1-t2u3-v4w5-x6y7z8a9b0c1,mobile_app,client_343,gift
+o9p0q1r2-s3t4-u5v6-w7x8-y9z0a1b2c3d4,client_659,2025-04-08 11:15:42,175000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,p8q9r0s1-t2u3-v4w5-x6y7-z8a9b0c1d2e3,mobile_app,client_571,debt
+q1r2s3t4-u5v6-w7x8-y9z0-a1b2c3d4e5f6,client_229,2025-03-29 04:50:18,4250.50,EUR,Aldi,deposit,84.125.38.112,retail,DE,Berlin,tablet,r0s1t2u3-v4w5-x6y7-z8a9-b0c1d2e3f4g5,web,null,null
+s3t4u5v6-w7x8-y9z0-a1b2-c3d4e5f6g7h8,client_471,2025-02-25 09:25:33,2150.00,RUB,Sber,withdrawal,91.84.125.38,utilities,RU,St. Petersburg,PC,t2u3v4w5-x6y7-z8a9-b0c1-d2e3f4g5h6i7,POS,null,null
+u5v6w7x8-y9z0-a1b2-c3d4-e5f6g7h8i9j0,client_107,2025-04-15 14:00:45,2950.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,v4w5x6y7-z8a9-b0c1-d2e3-f4g5h6i7j8k9,mobile_app,client_23,shared_expense
+w7x8y9z0-a1b2-c3d4-e5f6-g7h8i9j0k1l2,client_835,2025-04-04 07:35:20,185000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,x6y7z8a9-b0c1-d2e3-f4g5-h6i7j8k9l0m1,mobile_app,null,null
+y9z0a1b2-c3d4-e5f6-g7h8-i9j0k1l2m3n4,client_351,2025-04-29 02:10:35,195000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,z8a9b0c1-d2e3-f4g5-h6i7-j8k9l0m1n2o3,mobile_app,client_439,debt
+a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6,client_251,2025-02-18 06:45:28,2050.00,EUR,Auchan,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,b0c1d2e3-f4g5-h6i7-j8k9-l0m1n2o3p4q5,web,null,null
+c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8,client_577,2025-03-30 11:20:42,3750.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,d2e3f4g5-h6i7-j8k9-l0m1-n2o3p4q5r6s7,mobile_app,client_445,shared_expense
+e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0,client_197,2025-04-22 05:55:15,145000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,f4g5h6i7-j8k9-l0m1-n2o3-p4q5r6s7t8u9,mobile_app,null,null
+g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2,client_139,2025-03-04 00:30:28,1750.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,h6i7j8k9-l0m1-n2o3-p4q5-r6s7t8u9v0w1,mobile_app,client_183,gift
+i9j0k1l2-m3n4-o5p6-q7r8-s9t0u1v2w3x4,client_901,2025-04-09 10:05:42,155000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,j8k9l0m1-n2o3-p4q5-r6s7-t8u9v0w1x2y3,mobile_app,client_747,debt
+k1l2m3n4-o5p6-q7r8-s9t0-u1v2w3x4y5z6,client_373,2025-03-31 03:40:18,4750.50,EUR,Zalando,deposit,84.125.38.112,retail,DE,Munich,tablet,l0m1n2o3-p4q5-r6s7-t8u9-v0w1x2y3z4a5,web,null,null
+m3n4o5p6-q7r8-s9t0-u1v2-w3x4y5z6a7b8,client_285,2025-02-26 08:15:33,1850.00,RUB,Ozon,withdrawal,91.84.125.38,retail,RU,Novosibirsk,PC,n2o3p4q5-r6s7-t8u9-v0w1-x2y3z4a5b6c7,POS,null,null
+o5p6q7r8-s9t0-u1v2-w3x4-y5z6a7b8c9d0,client_537,2025-04-16 12:50:45,2850.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,p4q5r6s7-t8u9-v0w1-x2y3-z4a5b6c7d8e9,mobile_app,client_613,shared_expense
+q7r8s9t0-u1v2-w3x4-y5z6-a7b8c9d0e1f2,client_169,2025-04-05 06:25:20,125000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,r6s7t8u9-v0w1-x2y3-z4a5-b6c7d8e9f0g1,mobile_app,null,null
+s9t0u1v2-w3x4-y5z6-a7b8-c9d0e1f2g3h4,client_615,2025-04-30 01:00:35,175000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,t8u9v0w1-x2y3-z4a5-b6c7-d8e9f0g1h2i3,mobile_app,client_967,debt
+u1v2w3x4-y5z6-a7b8-c9d0-e1f2g3h4i5j6,client_33,2025-02-19 05:35:28,1950.00,EUR,Carrefour,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,v0w1x2y3-z4a5-b6c7-d8e9-f0g1h2i3j4k5,web,null,null
+w3x4y5z6-a7b8-c9d0-e1f2-g3h4i5j6k7l8,client_779,2025-04-01 10:10:42,3650.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,x2y3z4a5-b6c7-d8e9-f0g1-h2i3j4k5l6m7,mobile_app,client_865,shared_expense
+y5z6a7b8-c9d0-e1f2-g3h4-i5j6k7l8m9n0,client_97,2025-04-23 04:45:15,135000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,z4a5b6c7-d8e9-f0g1-h2i3-j4k5l6m7n8o9,mobile_app,null,null
+a7b8c9d0-e1f2-g3h4-i5j6-k7l8m9n0o1p2,client_445,2025-03-05 23:20:28,2150.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,b6c7d8e9-f0g1-h2i3-j4k5-l6m7n8o9p0q1,mobile_app,client_401,gift
+c9d0e1f2-g3h4-i5j6-k7l8-m9n0o1p2q3r4,client_715,2025-04-10 08:55:42,185000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,d8e9f0g1-h2i3-j4k5-l6m7-n8o9p0q1r2s3,mobile_app,client_483,debt
+e1f2g3h4-i5j6-k7l8-m9n0-o1p2q3r4s5t6,client_295,2025-04-06 02:30:18,4250.50,EUR,Aldi,deposit,84.125.38.112,retail,DE,Berlin,tablet,f0g1h2i3-j4k5-l6m7-n8o9-p0q1r2s3t4u5,web,null,null
+g3h4i5j6-k7l8-m9n0-o1p2-q3r4s5t6u7v8,client_571,2025-02-27 07:05:33,2250.00,RUB,Sber,withdrawal,91.84.125.38,utilities,RU,St. Petersburg,PC,h2i3j4k5-l6m7-n8o9-p0q1-r2s3t4u5v6w7,POS,null,null
+i5j6k7l8-m9n0-o1p2-q3r4-s5t6u7v8w9x0,client_219,2025-04-17 11:40:45,3050.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,j4k5l6m7-n8o9-p0q1-r2s3-t4u5v6w7x8y9,mobile_app,client_307,shared_expense
+k7l8m9n0-o1p2-q3r4-s5t6-u7v8w9x0y1z2,client_439,2025-04-07 05:15:20,165000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,l6m7n8o9-p0q1-r2s3-t4u5-v6w7x8y9z0a1,mobile_app,null,null
+m9n0o1p2-q3r4-s5t6-u7v8-w9x0y1z2a3b4,client_27,2025-05-01 00:50:35,195000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,n8o9p0q1-r2s3-t4u5-v6w7-x8y9z0a1b2c3,mobile_app,client_35,debt
+o1p2q3r4-s5t6-u7v8-w9x0-y1z2a3b4c5d6,client_153,2025-02-20 04:25:28,1850.00,EUR,Auchan,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,p0q1r2s3-t4u5-v6w7-x8y9-z0a1b2c3d4e5,web,null,null
+q3r4s5t6-u7v8-w9x0-y1z2-a3b4c5d6e7f8,client_367,2025-04-02 09:00:42,3550.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,r2s3t4u5-v6w7-x8y9-z0a1-b2c3d4e5f6g7,mobile_app,client_183,shared_expense
+s5t6u7v8-w9x0-y1z2-a3b4-c5d6e7f8g9h0,client_585,2025-04-24 03:35:15,155000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,t4u5v6w7-x8y9-z0a1-b2c3-d4e5f6g7h8i9,mobile_app,null,null
+u7v8w9x0-y1z2-a3b4-c5d6-e7f8g9h0i1j2,client_93,2025-03-06 22:10:28,1650.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,v6w7x8y9-z0a1-b2c3-d4e5-f6g7h8i9j0k1,mobile_app,client_15,gift
+w9x0y1z2-a3b4-c5d6-e7f8-g9h0i1j2k3l4,client_461,2025-04-11 07:45:42,175000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,x8y9z0a1-b2c3-d4e5-f6g7-h8i9j0k1l2m3,mobile_app,client_373,debt
+y1z2a3b4-c5d6-e7f8-g9h0-i1j2k3l4m5n6,client_217,2025-04-08 01:20:18,4250.50,EUR,Zalando,deposit,84.125.38.112,retail,DE,Munich,tablet,z0a1b2c3-d4e5-f6g7-h8i9-j0k1l2m3n4o5,web,null,null
+a3b4c5d6-e7f8-g9h0-i1j2-k3l4m5n6o7p8,client_55,2025-02-28 05:55:33,2350.00,RUB,Ozon,withdrawal,91.84.125.38,retail,RU,Novosibirsk,PC,b2c3d4e5-f6g7-h8i9-j0k1-l2m3n4o5p6q7,POS,null,null
+c5d6e7f8-g9h0-i1j2-k3l4-m5n6o7p8q9r0,client_821,2025-04-18 10:30:45,3150.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9,mobile_app,client_959,shared_expense
+e7f8g9h0-i1j2-k3l4-m5n6-o7p8q9r0s1t2,client_153,2025-04-09 04:05:20,145000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1,mobile_app,null,null
+g9h0i1j2-k3l4-m5n6-o7p8-q9r0s1t2u3v4,client_967,2025-05-02 23:40:35,165000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3,mobile_app,client_747,debt
+i1j2k3l4-m5n6-o7p8-q9r0-s1t2u3v4w5x6,client_335,2025-02-21 03:15:28,2050.00,EUR,Carrefour,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,j0k1l2m3-n4o5-p6q7-r8s9-t0u1v2w3x4y5,web,null,null
+k3l4m5n6-o7p8-q9r0-s1t2-u3v4w5x6y7z8,client_613,2025-04-03 07:50:42,3950.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,l2m3n4o5-p6q7-r8s9-t0u1-v2w3x4y5z6a7,mobile_app,client_537,shared_expense
+m5n6o7p8-q9r0-s1t2-u3v4-w5x6y7z8a9b0,client_207,2025-04-25 02:25:15,135000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,n4o5p6q7-r8s9-t0u1-v2w3-x4y5z6a7b8c9,mobile_app,null,null
+o7p8q9r0-s1t2-u3v4-w5x6-y7z8a9b0c1d2,client_47,2025-03-07 21:00:28,1550.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,p6q7r8s9-t0u1-v2w3-x4y5-z6a7b8c9d0e1,mobile_app,client_79,gift
+q9r0s1t2-u3v4-w5x6-y7z8-a9b0c1d2e3f4,client_307,2025-04-12 06:35:42,195000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,r8s9t0u1-v2w3-x4y5-z6a7-b8c9d0e1f2g3,mobile_app,client_219,debt
+s1t2u3v4-w5x6-y7z8-a9b0-c1d2e3f4g5h6,client_559,2025-04-10 00:10:18,4750.50,EUR,Aldi,deposit,84.125.38.112,retail,DE,Berlin,tablet,t0u1v2w3-x4y5-z6a7-b8c9-d0e1f2g3h4i5,web,null,null
+u3v4w5x6-y7z8-a9b0-c1d2-e3f4g5h6i7j8,client_173,2025-03-01 04:45:33,1950.00,RUB,Sber,withdrawal,91.84.125.38,utilities,RU,St. Petersburg,PC,v2w3x4y5-z6a7-b8c9-d0e1-f2g3h4i5j6k7,POS,null,null
+w5x6y7z8-a9b0-c1d2-e3f4-g5h6i7j8k9l0,client_693,2025-04-19 09:20:45,2850.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,x4y5z6a7-b8c9-d0e1-f2g3-h4i5j6k7l8m9,mobile_app,client_825,shared_expense
+y7z8a9b0-c1d2-e3f4-g5h6-i7j8k9l0m1n2,client_263,2025-04-11 02:55:20,125000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,z6a7b8c9-d0e1-f2g3-h4i5-j6k7l8m9n0o1,mobile_app,null,null
+a9b0c1d2-e3f4-g5h6-i7j8-k9l0m1n2o3p4,client_417,2025-05-03 22:30:35,155000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,b8c9d0e1-f2g3-h4i5-j6k7-l8m9n0o1p2q3,mobile_app,client_351,debt
+c1d2e3f4-g5h6-i7j8-k9l0-m1n2o3p4q5r6,client_75,2025-02-22 02:05:28,1850.00,EUR,Auchan,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,d0e1f2g3-h4i5-j6k7-l8m9-n0o1p2q3r4s5,web,null,null
+e3f4g5h6-i7j8-k9l0-m1n2-o3p4q5r6s7t8,client_931,2025-04-04 06:40:42,3850.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,f2g3h4i5-j6k7-l8m9-n0o1-p2q3r4s5t6u7,mobile_app,client_797,shared_expense
+g5h6i7j8-k9l0-m1n2-o3p4-q5r6s7t8u9v0,client_141,2025-04-26 01:15:15,165000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,h4i5j6k7-l8m9-n0o1-p2q3-r4s5t6u7v8w9,mobile_app,null,null
+i7j8k9l0-m1n2-o3p4-q5r6-s7t8u9v0w1x2,client_385,2025-03-08 19:50:28,2250.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,j6k7l8m9-n0o1-p2q3-r4s5-t6u7v8w9x0y1,mobile_app,client_343,gift
+k9l0m1n2-o3p4-q5r6-s7t8-u9v0w1x2y3z4,client_659,2025-04-13 05:25:42,175000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,l8m9n0o1-p2q3-r4s5-t6u7-v8w9x0y1z2a3,mobile_app,client_571,debt
+m1n2o3p4-q5r6-s7t8-u9v0-w1x2y3z4a5b6,client_229,2025-04-11 23:00:18,4250.50,EUR,Zalando,deposit,84.125.38.112,retail,DE,Munich,tablet,n0o1p2q3-r4s5-t6u7-v8w9-x0y1z2a3b4c5,web,null,null
+o3p4q5r6-s7t8-u9v0-w1x2-y3z4a5b6c7d8,client_471,2025-03-02 03:35:33,1950.00,RUB,Ozon,withdrawal,91.84.125.38,retail,RU,Novosibirsk,PC,p2q3r4s5-t6u7-v8w9-x0y1-z2a3b4c5d6e7,POS,null,null
+q5r6s7t8-u9v0-w1x2-y3z4-a5b6c7d8e9f0,client_107,2025-04-20 08:10:45,2950.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,r4s5t6u7-v8w9-x0y1-z2a3-b4c5d6e7f8g9,mobile_app,client_23,shared_expense
+s7t8u9v0-w1x2-y3z4-a5b6-c7d8e9f0g1h2,client_835,2025-04-12 01:45:20,185000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,t6u7v8w9-x0y1-z2a3-b4c5-d6e7f8g9h0i1,mobile_app,null,null
+u9v0w1x2-y3z4-a5b6-c7d8-e9f0g1h2i3j4,client_351,2025-05-04 21:20:35,195000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,v8w9x0y1-z2a3-b4c5-d6e7-f8g9h0i1j2k3,mobile_app,client_439,debt
+w1x2y3z4-a5b6-c7d8-e9f0-g1h2i3j4k5l6,client_251,2025-02-23 00:55:28,2050.00,EUR,Carrefour,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,x0y1z2a3-b4c5-d6e7-f8g9-h0i1j2k3l4m5,web,null,null
+y3z4a5b6-c7d8-e9f0-g1h2-i3j4k5l6m7n8,client_577,2025-04-05 05:30:42,3750.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,z2a3b4c5-d6e7-f8g9-h0i1-j2k3l4m5n6o7,mobile_app,client_445,shared_expense
+a5b6c7d8-e9f0-g1h2-i3j4-k5l6m7n8o9p0,client_197,2025-04-27 00:05:15,145000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,b4c5d6e7-f8g9-h0i1-j2k3-l4m5n6o7p8q9,mobile_app,null,null
+c7d8e9f0-g1h2-i3j4-k5l6-m7n8o9p0q1r2,client_139,2025-03-09 18:40:28,1750.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,d6e7f8g9-h0i1-j2k3-l4m5-n6o7p8q9r0s1,mobile_app,client_183,gift
+e9f0g1h2-i3j4-k5l6-m7n8-o9p0q1r2s3t4,client_901,2025-04-14 04:15:42,155000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,f8g9h0i1-j2k3-l4m5-n6o7-p8q9r0s1t2u3,mobile_app,client_747,debt
+g1h2i3j4-k5l6-m7n8-o9p0-q1r2s3t4u5v6,client_373,2025-04-12 21:50:18,4750.50,EUR,Aldi,deposit,84.125.38.112,retail,DE,Berlin,tablet,h0i1j2k3-l4m5-n6o7-p8q9-r0s1t2u3v4w5,web,null,null
+i3j4k5l6-m7n8-o9p0-q1r2-s3t4u5v6w7x8,client_285,2025-03-03 02:25:33,1850.00,RUB,Sber,withdrawal,91.84.125.38,utilities,RU,St. Petersburg,PC,j2k3l4m5-n6o7-p8q9-r0s1-t2u3v4w5x6y7,POS,null,null
+k5l6m7n8-o9p0-q1r2-s3t4-u5v6w7x8y9z0,client_537,2025-04-21 07:00:45,2850.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,l4m5n6o7-p8q9-r0s1-t2u3-v4w5x6y7z8a9,mobile_app,client_613,shared_expense
+m7n8o9p0-q1r2-s3t4-u5v6-w7x8y9z0a1b2,client_169,2025-04-13 00:35:20,125000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,n6o7p8q9-r0s1-t2u3-v4w5-x6y7z8a9b0c1,mobile_app,null,null
+o9p0q1r2-s3t4-u5v6-w7x8-y9z0a1b2c3d4,client_615,2025-05-05 20:10:35,175000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,p8q9r0s1-t2u3-v4w5-x6y7-z8a9b0c1d2e3,mobile_app,client_967,debt
+q1r2s3t4-u5v6-w7x8-y9z0-a1b2c3d4e5f6,client_33,2025-02-24 23:45:28,1950.00,EUR,Auchan,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,r0s1t2u3-v4w5-x6y7-z8a9-b0c1d2e3f4g5,web,null,null
+s3t4u5v6-w7x8-y9z0-a1b2-c3d4e5f6g7h8,client_779,2025-04-06 04:20:42,3650.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,t2u3v4w5-x6y7-z8a9-b0c1-d2e3f4g5h6i7,mobile_app,client_865,shared_expense
+u5v6w7x8-y9z0-a1b2-c3d4-e5f6g7h8i9j0,client_97,2025-04-28 22:55:15,135000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,v4w5x6y7-z8a9-b0c1-d2e3-f4g5h6i7j8k9,mobile_app,null,null
+w7x8y9z0-a1b2-c3d4-e5f6-g7h8i9j0k1l2,client_445,2025-03-10 17:30:28,2150.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,x6y7z8a9-b0c1-d2e3-f4g5-h6i7j8k9l0m1,mobile_app,client_401,gift
+y9z0a1b2-c3d4-e5f6-g7h8-i9j0k1l2m3n4,client_715,2025-04-15 03:05:42,185000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,z8a9b0c1-d2e3-f4g5-h6i7-j8k9l0m1n2o3,mobile_app,client_483,debt
+a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6,client_295,2025-04-13 20:40:18,4250.50,EUR,Zalando,deposit,84.125.38.112,retail,DE,Munich,tablet,b0c1d2e3-f4g5-h6i7-j8k9-l0m1n2o3p4q5,web,null,null
+c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8,client_571,2025-03-04 01:15:33,2250.00,RUB,Ozon,withdrawal,91.84.125.38,retail,RU,Novosibirsk,PC,d2e3f4g5-h6i7-j8k9-l0m1-n2o3p4q5r6s7,POS,null,null
+e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0,client_219,2025-04-22 05:50:45,3050.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,f4g5h6i7-j8k9-l0m1-n2o3-p4q5r6s7t8u9,mobile_app,client_307,shared_expense
+g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2,client_439,2025-04-14 23:25:20,165000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,h6i7j8k9-l0m1-n2o3-p4q5-r6s7t8u9v0w1,mobile_app,null,null
+i9j0k1l2-m3n4-o5p6-q7r8-s9t0u1v2w3x4,client_27,2025-05-06 19:00:35,195000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,j8k9l0m1-n2o3-p4q5-r6s7-t8u9v0w1x2y3,mobile_app,client_35,debt
+k1l2m3n4-o5p6-q7r8-s9t0-u1v2w3x4y5z6,client_153,2025-02-25 22:35:28,1850.00,EUR,Carrefour,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,l0m1n2o3-p4q5-r6s7-t8u9-v0w1x2y3z4a5,web,null,null
+m3n4o5p6-q7r8-s9t0-u1v2-w3x4y5z6a7b8,client_367,2025-04-07 03:10:42,3550.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,n2o3p4q5-r6s7-t8u9-v0w1-x2y3z4a5b6c7,mobile_app,client_183,shared_expense
+o5p6q7r8-s9t0-u1v2-w3x4-y5z6a7b8c9d0,client_585,2025-04-29 21:45:15,155000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,p4q5r6s7-t8u9-v0w1-x2y3-z4a5b6c7d8e9,mobile_app,null,null
+q7r8s9t0-u1v2-w3x4-y5z6-a7b8c9d0e1f2,client_93,2025-03-11 16:20:28,1650.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,r6s7t8u9-v0w1-x2y3-z4a5-b6c7d8e9f0g1,mobile_app,client_15,gift
+s9t0u1v2-w3x4-y5z6-a7b8-c9d0e1f2g3h4,client_461,2025-04-16 01:55:42,175000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,t8u9v0w1-x2y3-z4a5-b6c7-d8e9f0g1h2i3,mobile_app,client_373,debt
+u1v2w3x4-y5z6-a7b8-c9d0-e1f2g3h4i5j6,client_217,2025-04-14 19:30:18,4250.50,EUR,Aldi,deposit,84.125.38.112,retail,DE,Berlin,tablet,v0w1x2y3-z4a5-b6c7-d8e9-f0g1h2i3j4k5,web,null,null
+w3x4y5z6-a7b8-c9d0-e1f2-g3h4i5j6k7l8,client_55,2025-03-05 00:05:33,2350.00,RUB,Sber,withdrawal,91.84.125.38,utilities,RU,St. Petersburg,PC,x2y3z4a5-b6c7-d8e9-f0g1-h2i3j4k5l6m7,POS,null,null
+y5z6a7b8-c9d0-e1f2-g3h4-i5j6k7l8m9n0,client_821,2025-04-23 04:40:45,3150.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,z4a5b6c7-d8e9-f0g1-h2i3-j4k5l6m7n8o9,mobile_app,client_959,shared_expense
+a7b8c9d0-e1f2-g3h4-i5j6-k7l8m9n0o1p2,client_153,2025-04-15 22:15:20,145000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,b6c7d8e9-f0g1-h2i3-j4k5-l6m7n8o9p0q1,mobile_app,null,null
+c9d0e1f2-g3h4-i5j6-k7l8-m9n0o1p2q3r4,client_967,2025-05-07 17:50:35,165000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,d8e9f0g1-h2i3-j4k5-l6m7-n8o9p0q1r2s3,mobile_app,client_747,debt
+e1f2g3h4-i5j6-k7l8-m9n0-o1p2q3r4s5t6,client_335,2025-02-26 21:25:28,2050.00,EUR,Auchan,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,f0g1h2i3-j4k5-l6m7-n8o9-p0q1r2s3t4u5,web,null,null
+g3h4i5j6-k7l8-m9n0-o1p2-q3r4s5t6u7v8,client_613,2025-04-08 02:00:42,3950.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,h2i3j4k5-l6m7-n8o9-p0q1-r2s3t4u5v6w7,mobile_app,client_537,shared_expense
+i5j6k7l8-m9n0-o1p2-q3r4-s5t6u7v8w9x0,client_207,2025-04-30 20:35:15,135000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,j4k5l6m7-n8o9-p0q1-r2s3-t4u5v6w7x8y9,mobile_app,null,null
+k7l8m9n0-o1p2-q3r4-s5t6-u7v8w9x0y1z2,client_47,2025-03-12 15:10:28,1550.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,l6m7n8o9-p0q1-r2s3-t4u5-v6w7x8y9z0a1,mobile_app,client_79,gift
+m9n0o1p2-q3r4-s5t6-u7v8-w9x0y1z2a3b4,client_307,2025-04-17 00:45:42,195000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,n8o9p0q1-r2s3-t4u5-v6w7-x8y9z0a1b2c3,mobile_app,client_219,debt
+o1p2q3r4-s5t6-u7v8-w9x0-y1z2a3b4c5d6,client_559,2025-04-15 18:20:18,4750.50,EUR,Zalando,deposit,84.125.38.112,retail,DE,Munich,tablet,p0q1r2s3-t4u5-v6w7-x8y9-z0a1b2c3d4e5,web,null,null
+q3r4s5t6-u7v8-w9x0-y1z2-a3b4c5d6e7f8,client_173,2025-03-06 22:55:33,1950.00,RUB,Ozon,withdrawal,91.84.125.38,retail,RU,Novosibirsk,PC,r2s3t4u5-v6w7-x8y9-z0a1-b2c3d4e5f6g7,POS,null,null
+s5t6u7v8-w9x0-y1z2-a3b4-c5d6e7f8g9h0,client_693,2025-04-24 03:30:45,2850.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,t4u5v6w7-x8y9-z0a1-b2c3-d4e5f6g7h8i9,mobile_app,client_825,shared_expense
+u7v8w9x0-y1z2-a3b4-c5d6-e7f8g9h0i1j2,client_263,2025-04-16 21:05:20,125000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,v6w7x8y9-z0a1-b2c3-d4e5-f6g7h8i9j0k1,mobile_app,null,null
+w9x0y1z2-a3b4-c5d6-e7f8-g9h0i1j2k3l4,client_417,2025-05-08 16:40:35,155000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,x8y9z0a1-b2c3-d4e5-f6g7-h8i9j0k1l2m3,mobile_app,client_351,debt
+y1z2a3b4-c5d6-e7f8-g9h0-i1j2k3l4m5n6,client_75,2025-02-27 20:15:28,1850.00,EUR,Carrefour,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,z0a1b2c3-d4e5-f6g7-h8i9-j0k1l2m3n4o5,web,null,null
+a3b4c5d6-e7f8-g9h0-i1j2-k3l4m5n6o7p8,client_931,2025-04-09 00:50:42,3850.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,b2c3d4e5-f6g7-h8i9-j0k1-l2m3n4o5p6q7,mobile_app,client_797,shared_expense
+c5d6e7f8-g9h0-i1j2-k3l4-m5n6o7p8q9r0,client_141,2025-05-01 19:25:15,165000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9,mobile_app,null,null
+e7f8g9h0-i1j2-k3l4-m5n6-o7p8q9r0s1t2,client_385,2025-03-13 14:00:28,2250.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1,mobile_app,client_343,gift
+g9h0i1j2-k3l4-m5n6-o7p8-q9r0s1t2u3v4,client_659,2025-04-18 23:35:42,175000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3,mobile_app,client_571,debt
+i1j2k3l4-m5n6-o7p8-q9r0-s1t2u3v4w5x6,client_229,2025-04-16 17:10:18,4250.50,EUR,Aldi,deposit,84.125.38.112,retail,DE,Berlin,tablet,j0k1l2m3-n4o5-p6q7-r8s9-t0u1v2w3x4y5,web,null,null
+k3l4m5n6-o7p8-q9r0-s1t2-u3v4w5x6y7z8,client_471,2025-03-07 21:45:33,2150.00,RUB,Sber,withdrawal,91.84.125.38,utilities,RU,St. Petersburg,PC,l2m3n4o5-p6q7-r8s9-t0u1-v2w3x4y5z6a7,POS,null,null
+m5n6o7p8-q9r0-s1t2-u3v4-w5x6y7z8a9b0,client_107,2025-04-25 02:20:45,2950.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,n4o5p6q7-r8s9-t0u1-v2w3-x4y5z6a7b8c9,mobile_app,client_23,shared_expense
+o7p8q9r0-s1t2-u3v4-w5x6-y7z8a9b0c1d2,client_835,2025-04-17 19:55:20,185000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,p6q7r8s9-t0u1-v2w3-x4y5-z6a7b8c9d0e1,mobile_app,null,null
+q9r0s1t2-u3v4-w5x6-y7z8-a9b0c1d2e3f4,client_351,2025-05-09 15:30:35,195000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,r8s9t0u1-v2w3-x4y5-z6a7-b8c9d0e1f2g3,mobile_app,client_439,debt
+s1t2u3v4-w5x6-y7z8-a9b0-c1d2e3f4g5h6,client_251,2025-02-28 19:05:28,2050.00,EUR,Auchan,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,t0u1v2w3-x4y5-z6a7-b8c9-d0e1f2g3h4i5,web,null,null
+u3v4w5x6-y7z8-a9b0-c1d2-e3f4g5h6i7j8,client_577,2025-04-10 23:40:42,3750.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,v2w3x4y5-z6a7-b8c9-d0e1-f2g3h4i5j6k7,mobile_app,client_445,shared_expense
+w5x6y7z8-a9b0-c1d2-e3f4-g5h6i7j8k9l0,client_197,2025-05-02 18:15:15,145000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,x4y5z6a7-b8c9-d0e1-f2g3-h4i5j6k7l8m9,mobile_app,null,null
+y7z8a9b0-c1d2-e3f4-g5h6-i7j8k9l0m1n2,client_139,2025-03-14 12:50:28,1750.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,z6a7b8c9-d0e1-f2g3-h4i5-j6k7l8m9n0o1,mobile_app,client_183,gift
+a9b0c1d2-e3f4-g5h6-i7j8-k9l0m1n2o3p4,client_901,2025-04-19 22:25:42,155000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,b8c9d0e1-f2g3-h4i5-j6k7-l8m9n0o1p2q3,mobile_app,client_747,debt
+c1d2e3f4-g5h6-i7j8-k9l0-m1n2o3p4q5r6,client_373,2025-04-17 16:00:18,4750.50,EUR,Zalando,deposit,84.125.38.112,retail,DE,Munich,tablet,d0e1f2g3-h4i5-j6k7-l8m9-n0o1p2q3r4s5,web,null,null
+e3f4g5h6-i7j8-k9l0-m1n2-o3p4q5r6s7t8,client_285,2025-03-08 20:35:33,1850.00,RUB,Ozon,withdrawal,91.84.125.38,retail,RU,Novosibirsk,PC,f2g3h4i5-j6k7-l8m9-n0o1-p2q3r4s5t6u7,POS,null,null
+g5h6i7j8-k9l0-m1n2-o3p4-q5r6s7t8u9v0,client_537,2025-04-26 01:10:45,2850.75,USD,null,p2p,38.91.84.125,p2p,US,New York,smartphone,h4i5j6k7-l8m9-n0o1-p2q3-r4s5t6u7v8w9,mobile_app,client_613,shared_expense
+i7j8k9l0-m1n2-o3p4-q5r6-s7t8u9v0w1x2,client_169,2025-04-18 18:45:20,125000.50,CNY,WeChat Pay,deposit,112.38.91.84,investment,CN,Shanghai,smartphone,j6k7l8m9-n0o1-p2q3-r4s5-t6u7v8w9x0y1,mobile_app,null,null
+k9l0m1n2-o3p4-q5r6-s7t8-u9v0w1x2y3z4,client_615,2025-05-10 14:20:35,175000.25,USD,null,p2p,45.112.38.91,p2p,US,Los Angeles,smartphone,l8m9n0o1-p2q3-r4s5-t6u7-v8w9x0y1z2a3,mobile_app,client_967,debt
+m1n2o3p4-q5r6-s7t8-u9v0-w1x2y3z4a5b6,client_33,2025-03-01 17:55:28,1950.00,EUR,Carrefour,withdrawal,62.45.112.38,utilities,FR,Paris,tablet,n0o1p2q3-r4s5-t6u7-v8w9-x0y1z2a3b4c5,web,null,null
+o3p4q5r6-s7t8-u9v0-w1x2-y3z4a5b6c7d8,client_779,2025-04-11 22:30:42,3650.50,RUB,null,p2p,95.62.45.112,p2p,RU,Moscow,smartphone,p2q3r4s5-t6u7-v8w9-x0y1-z2a3b4c5d6e7,mobile_app,client_865,shared_expense
+q5r6s7t8-u9v0-w1x2-y3z4-a5b6c7d8e9f0,client_97,2025-05-03 17:05:15,135000.75,CNY,Alipay,deposit,112.95.62.45,investment,CN,Beijing,smartphone,r4s5t6u7-v8w9-x0y1-z2a3-b4c5d6e7f8g9,mobile_app,null,null
+s7t8u9v0-w1x2-y3z4-a5b6-c7d8e9f0g1h2,client_445,2025-03-15 11:40:28,2150.00,USD,null,p2p,38.112.95.62,p2p,US,Chicago,smartphone,t6u7v8w9-x0y1-z2a3-b4c5-d6e7f8g9h0i1,mobile_app,client_401,gift
+u9v0w1x2-y3z4-a5b6-c7d8-e9f0g1h2i3j4,client_715,2025-04-20 21:15:42,185000.25,JPY,null,p2p,125.38.112.95,p2p,JP,Tokyo,smartphone,v8w9x0y1-z2a3-b4c5-d6e7-f8g9h0i1j2k3,mobile_app,client_483,debt
+w1x2y3z4-a5b6-c7d8-e9f0-g1h2i3j4k5l6,client_295,2025-04-18 14:50:18,4250.50,EUR,Aldi,deposit,84.125.38.112,retail,DE,Berlin,tablet,x0y1z2a3-b4c5-d6e7-f8g9-h0i1j2k3l4m5,web,null,null

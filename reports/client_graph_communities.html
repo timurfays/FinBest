@@ -1,0 +1,65 @@
+
+<html>
+<head>
+    <title>Отчет по анализу транзакционного графа</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+        .section { margin-bottom: 30px; }
+        .stats { border-collapse: collapse; width: 100%; }
+        .stats th, .stats td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .stats th { background-color: #f2f2f2; }
+        .image { margin-top: 20px; text-align: center; }
+        .image img { max-width: 100%; height: auto; }
+        .links { margin-top: 20px; }
+        .links a { display: inline-block; margin-right: 20px; padding: 10px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; }
+        .links a:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Отчет по анализу транзакционного графа клиентов</h1>
+    
+    <div class="section">
+        <h2>Статистика графа</h2>
+        <table class="stats">
+            <tr><th>Метрика</th><th>Значение</th></tr>
+            <tr><td>Всего узлов</td><td>1839</td></tr>
+            <tr><td>Всего ребер</td><td>16260</td></tr>
+            <tr><td>Отфильтровано узлов</td><td>935</td></tr>
+            <tr><td>Отфильтровано ребер</td><td>15238</td></tr>
+            <tr><td>Количество сообществ</td><td>1004</td></tr>
+            <tr><td>Размер крупнейшего сообщества</td><td>282</td></tr>
+            <tr><td>Размер наименьшего сообщества</td><td>1</td></tr>
+            <tr><td>Средний размер сообщества</td><td>1.83</td></tr>
+            <tr><td>Средняя степень</td><td>17.68</td></tr>
+            <tr><td>Максимальная степень</td><td>314</td></tr>
+            <tr><td>Средняя взвешенная степень</td><td>32.69</td></tr>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2>Визуализации графа</h2>
+        <div class="image">
+            <h3>Интерактивный граф (Plotly)</h3>
+            <div class="plotly-container">
+                <iframe src="client_graph_plotly_full.html" width="80%" height="1280px" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="image">
+            <h3>Топ-5 сообществ (Plotly)</h3>
+            <div class="plotly-container">
+                <iframe src="client_graph_top5_pyvis.html" width="80%" height="1280px" frameborder="0"></iframe>
+            </div>
+        </div>
+        
+        
+        <div class="links">
+            <h3>Интерактивные визуализации</h3>
+            <a href="client_graph_pyvis.html" target="_blank">PyVis (полный граф)</a>
+            <a href="client_graph_top5_pyvis.html" target="_blank">PyVis (топ-5 сообществ)</a>
+            <a href="client_graph_plotly_filtered.html" target="_blank">Plotly (отфильтрованный)</a>
+        </div>
+    </div>
+</body>
+</html>

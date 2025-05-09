@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #1a1a1a;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#d4e11a", "font": {"color": "white"}, "id": "13a55fb3b640e79d6e00434b550525a65fb97a7e404c10ab46a1c722317e1b9e", "label": "Client 13a55fb3...", "shape": "dot", "size": 28.862943611198908, "title": "Community: 1037\nInfluence: 1.00\nDegree: 0.00"}, {"color": "#7cd24f", "font": {"color": "white"}, "id": "client_187", "label": "Client client_1...", "shape": "dot", "size": 28.862943611198904, "title": "Community: 891\nInfluence: 1.00\nDegree: 1.00"}, {"color": "#26818e", "font": {"color": "white"}, "id": "client_989", "label": "Client client_9...", "shape": "dot", "size": 28.862943611198904, "title": "Community: 488\nInfluence: 1.00\nDegree: 1.00"}, {"color": "#7cd24f", "font": {"color": "white"}, "id": "client_1043", "label": "Client client_1...", "shape": "dot", "size": 28.862943611198904, "title": "Community: 891\nInfluence: 1.00\nDegree: 4.00"}, {"color": "#7cd24f", "font": {"color": "white"}, "id": "a36ebb28a11186d7232f8a81bb9c08a321e65cf3922f1965535c8a0739f76b54", "label": "Client a36ebb28...", "shape": "dot", "size": 28.862943611198908, "title": "Community: 891\nInfluence: 1.00\nDegree: 0.00"}, {"color": "#7cd24f", "font": {"color": "white"}, "id": "client_147", "label": "Client client_1...", "shape": "dot", "size": 28.862943611198904, "title": "Community: 891\nInfluence: 1.00\nDegree: 2.00"}, {"color": "#7cd24f", "font": {"color": "white"}, "id": "1cafb586fc39d4b8fea08bdf45186128fd580e8bea1441b394b457fec53f95fa", "label": "Client 1cafb586...", "shape": "dot", "size": 28.862943611198908, "title": "Community: 891\nInfluence: 1.00\nDegree: 0.00"}, {"color": "#7cd24f", "font": {"color": "white"}, "id": "client_769", "label": "Client client_7...", "shape": "dot", "size": 28.862943611198904, "title": "Community: 891\nInfluence: 1.00\nDegree: 1.00"}, {"color": "#26818e", "font": {"color": "white"}, "id": "client_559", "label": "Client client_5...", "shape": "dot", "size": 28.862943611198904, "title": "Community: 488\nInfluence: 1.00\nDegree: 2.00"}, {"color": "#d4e11a", "font": {"color": "white"}, "id": "606011acdd0eddd440013aac100af9f0048852e145947807a869f589ba1e166e", "label": "Client 606011ac...", "shape": "dot", "size": 28.862943611198908, "title": "Community: 1037\nInfluence: 1.00\nDegree: 0.00"}, {"color": "#d4e11a", "font": {"color": "white"}, "id": "client_107", "label": "Client client_1...", "shape": "dot", "size": 28.862943611198904, "title": "Community: 1037\nInfluence: 1.00\nDegree: 2.00"}, {"color": "#d4e11a", "font": {"color": "white"}, "id": "client_117", "label": "Client client_1...", "shape": "dot", "size": 28.862943611198904, "title": "Community: 1037\nInfluence: 1.00\nDegree: 2.00"}, {"color": "#26818e", "font": {"color": "white"}, "id": "52576af56adbae7dd59e58c675924d2d642d9d384d4a8d49107d5b7c5f356714", "label": "Client 52576af5...", "shape": "dot", "size": 28.862943611198908, "title": "Community: 488\nInfluence: 1.00\nDegree: 0.00"}, {"color": "#26818e", "font": {"color": "white"}, "id": "client_971", "label": "Client client_9...", "shape": "dot", "size": 28.862943611198904, "title": "Community: 488\nInfluence: 1.00\nDegree: 1.00"}, {"color": "#7cd24f", "font": {"color": "white"}, "id": "b17b4c9c13c7edad9b74994cdd699b3ab56a0375b9f3e7475bb543a860194dd0", "label": "Client b17b4c9c...", "shape": "dot", "size": 28.862943611198908, "title": "Community: 891\nInfluence: 1.00\nDegree: 0.00"}, {"color": "#26818e", "font": {"color": "white"}, "id": "ab6e4487d86ff18015dbcc960f7901014477234c5d2ad8608a11364af2857558", "label": "Client ab6e4487...", "shape": "dot", "size": 28.862943611198908, "title": "Community: 488\nInfluence: 1.00\nDegree: 0.00"}, {"color": "#7cd24f", "font": {"color": "white"}, "id": "a2f00974849c213c793f02050bb8bb567aaa0705cf86fda21b1c9d7c40b91953", "label": "Client a2f00974...", "shape": "dot", "size": 28.862943611198908, "title": "Community: 891\nInfluence: 1.00\nDegree: 0.00"}]);
+                  edges = new vis.DataSet([{"from": "13a55fb3b640e79d6e00434b550525a65fb97a7e404c10ab46a1c722317e1b9e", "title": "Weight: 7.76\nType: p2p", "to": "client_107", "value": 4.340563624648164}, {"from": "13a55fb3b640e79d6e00434b550525a65fb97a7e404c10ab46a1c722317e1b9e", "title": "Weight: 7.06\nType: p2p", "to": "client_117", "value": 4.173819619213764}, {"from": "client_187", "title": "Weight: 7.14\nType: p2p", "to": "b17b4c9c13c7edad9b74994cdd699b3ab56a0375b9f3e7475bb543a860194dd0", "value": 4.194319585269955}, {"from": "client_989", "title": "Weight: 12.41\nType: p2p", "to": "52576af56adbae7dd59e58c675924d2d642d9d384d4a8d49107d5b7c5f356714", "value": 5.1918550926438405}, {"from": "client_1043", "title": "Weight: 7.12\nType: p2p", "to": "1cafb586fc39d4b8fea08bdf45186128fd580e8bea1441b394b457fec53f95fa", "value": 4.18745371937153}, {"from": "client_1043", "title": "Weight: 11.89\nType: p2p", "to": "52576af56adbae7dd59e58c675924d2d642d9d384d4a8d49107d5b7c5f356714", "value": 5.1127759310269605}, {"from": "client_1043", "title": "Weight: 11.94\nType: p2p", "to": "a2f00974849c213c793f02050bb8bb567aaa0705cf86fda21b1c9d7c40b91953", "value": 5.120257586911748}, {"from": "client_1043", "title": "Weight: 250.69\nType: p2p", "to": "a36ebb28a11186d7232f8a81bb9c08a321e65cf3922f1965535c8a0739f76b54", "value": 11.05637371904315}, {"from": "a36ebb28a11186d7232f8a81bb9c08a321e65cf3922f1965535c8a0739f76b54", "title": "Weight: 7.06\nType: p2p", "to": "client_107", "value": 4.172727965819645}, {"from": "client_147", "title": "Weight: 229.98\nType: p2p", "to": "a2f00974849c213c793f02050bb8bb567aaa0705cf86fda21b1c9d7c40b91953", "value": 10.884624550027327}, {"from": "client_147", "title": "Weight: 12.18\nType: p2p", "to": "b17b4c9c13c7edad9b74994cdd699b3ab56a0375b9f3e7475bb543a860194dd0", "value": 5.157516811629575}, {"from": "client_769", "title": "Weight: 12.32\nType: p2p", "to": "a2f00974849c213c793f02050bb8bb567aaa0705cf86fda21b1c9d7c40b91953", "value": 5.179113198281263}, {"from": "client_559", "title": "Weight: 250.38\nType: p2p", "to": "52576af56adbae7dd59e58c675924d2d642d9d384d4a8d49107d5b7c5f356714", "value": 11.05396859442531}, {"from": "client_559", "title": "Weight: 6.80\nType: p2p", "to": "ab6e4487d86ff18015dbcc960f7901014477234c5d2ad8608a11364af2857558", "value": 4.106999678893392}, {"from": "606011acdd0eddd440013aac100af9f0048852e145947807a869f589ba1e166e", "title": "Weight: 321.59\nType: p2p", "to": "client_117", "value": 11.552785137802363}, {"from": "52576af56adbae7dd59e58c675924d2d642d9d384d4a8d49107d5b7c5f356714", "title": "Weight: 7.11\nType: p2p", "to": "client_971", "value": 4.186355321055945}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shape": "dot", "scaling": {"min": 10, "max": 50}, "font": {"size": 12, "face": "arial"}}, "edges": {"color": {"opacity": 0.3}, "smooth": {"type": "continuous"}}, "physics": {"enabled": true, "forceAtlas2Based": {"gravitationalConstant": -50, "centralGravity": 0.01, "springLength": 100, "springConstant": 0.08, "avoidOverlap": 0.5}, "maxVelocity": 50, "solver": "forceAtlas2Based", "timestep": 0.35}, "interaction": {"hover": true, "tooltipDelay": 200, "dragNodes": true, "dragView": true, "zoomView": true}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
