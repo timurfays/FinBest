@@ -1,0 +1,30 @@
+[2025-04-30T19:23:35.304+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: superset_sync.create_superset_dataset manual__2025-04-30T19:23:32.761745+00:00 [queued]>
+[2025-04-30T19:23:35.311+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: superset_sync.create_superset_dataset manual__2025-04-30T19:23:32.761745+00:00 [queued]>
+[2025-04-30T19:23:35.311+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-04-30T19:23:35.321+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): create_superset_dataset> on 2025-04-30 19:23:32.761745+00:00
+[2025-04-30T19:23:35.324+0000] {standard_task_runner.py:57} INFO - Started process 5928 to run task
+[2025-04-30T19:23:35.326+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'superset_sync', 'create_superset_dataset', 'manual__2025-04-30T19:23:32.761745+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/superset_sync.py', '--cfg-path', '/tmp/tmpgkhe4t0h']
+[2025-04-30T19:23:35.327+0000] {standard_task_runner.py:85} INFO - Job 56: Subtask create_superset_dataset
+[2025-04-30T19:23:35.338+0000] {logging_mixin.py:150} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-04-30T19:23:35.363+0000] {task_command.py:410} INFO - Running <TaskInstance: superset_sync.create_superset_dataset manual__2025-04-30T19:23:32.761745+00:00 [running]> on host a2dde070184b
+[2025-04-30T19:23:35.500+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='superset_sync' AIRFLOW_CTX_TASK_ID='create_superset_dataset' AIRFLOW_CTX_EXECUTION_DATE='2025-04-30T19:23:32.761745+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-30T19:23:32.761745+00:00'
+[2025-04-30T19:23:35.775+0000] {superset_sync.py:118} INFO - Dataset уже есть (id=1)
+[2025-04-30T19:23:35.899+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/superset_sync.py", line 127, in t_dataset
+    return ensure_dataset(sess, head, db_id(sess, head))
+  File "/opt/airflow/dags/superset_sync.py", line 121, in ensure_dataset
+    ensure_metric(sess, head, ds)      # ← новая строка
+  File "/opt/airflow/dags/superset_sync.py", line 104, in ensure_metric
+    headers=head, data=payload, timeout=10).raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: NOT FOUND for url: http://superset:8088/api/v1/dataset/1/metrics/
+[2025-04-30T19:23:35.909+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=superset_sync, task_id=create_superset_dataset, execution_date=20250430T192332, start_date=20250430T192335, end_date=20250430T192335
+[2025-04-30T19:23:35.922+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 56 for task create_superset_dataset (404 Client Error: NOT FOUND for url: http://superset:8088/api/v1/dataset/1/metrics/; 5928)
+[2025-04-30T19:23:35.939+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-04-30T19:23:35.973+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

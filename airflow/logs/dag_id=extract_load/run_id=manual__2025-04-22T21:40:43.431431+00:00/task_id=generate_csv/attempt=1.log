@@ -1,0 +1,13 @@
+[2025-04-22T21:40:46.050+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_load.generate_csv manual__2025-04-22T21:40:43.431431+00:00 [queued]>
+[2025-04-22T21:40:46.056+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_load.generate_csv manual__2025-04-22T21:40:43.431431+00:00 [queued]>
+[2025-04-22T21:40:46.057+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-04-22T21:40:46.067+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): generate_csv> on 2025-04-22 21:40:43.431431+00:00
+[2025-04-22T21:40:46.071+0000] {standard_task_runner.py:57} INFO - Started process 918 to run task
+[2025-04-22T21:40:46.073+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'extract_load', 'generate_csv', 'manual__2025-04-22T21:40:43.431431+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpemhak6me']
+[2025-04-22T21:40:46.074+0000] {standard_task_runner.py:85} INFO - Job 8: Subtask generate_csv
+[2025-04-22T21:40:46.112+0000] {task_command.py:410} INFO - Running <TaskInstance: extract_load.generate_csv manual__2025-04-22T21:40:43.431431+00:00 [running]> on host ee3569271e7b
+[2025-04-22T21:40:46.178+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='extract_load' AIRFLOW_CTX_TASK_ID='generate_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-04-22T21:40:43.431431+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-22T21:40:43.431431+00:00'
+[2025-04-22T21:40:46.195+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-04-22T21:40:46.204+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=extract_load, task_id=generate_csv, execution_date=20250422T214043, start_date=20250422T214046, end_date=20250422T214046
+[2025-04-22T21:40:46.245+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-04-22T21:40:46.289+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

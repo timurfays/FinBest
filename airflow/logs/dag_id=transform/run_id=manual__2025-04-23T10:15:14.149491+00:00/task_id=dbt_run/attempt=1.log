@@ -1,0 +1,41 @@
+[2025-04-23T10:15:17.191+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: transform.dbt_run manual__2025-04-23T10:15:14.149491+00:00 [queued]>
+[2025-04-23T10:15:17.197+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: transform.dbt_run manual__2025-04-23T10:15:14.149491+00:00 [queued]>
+[2025-04-23T10:15:17.197+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-04-23T10:15:17.207+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): dbt_run> on 2025-04-23 10:15:14.149491+00:00
+[2025-04-23T10:15:17.211+0000] {standard_task_runner.py:57} INFO - Started process 520 to run task
+[2025-04-23T10:15:17.213+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'transform', 'dbt_run', 'manual__2025-04-23T10:15:14.149491+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/transform.py', '--cfg-path', '/tmp/tmpbbvjzym3']
+[2025-04-23T10:15:17.214+0000] {standard_task_runner.py:85} INFO - Job 12: Subtask dbt_run
+[2025-04-23T10:15:17.252+0000] {task_command.py:410} INFO - Running <TaskInstance: transform.dbt_run manual__2025-04-23T10:15:14.149491+00:00 [running]> on host 9695aa16dd97
+[2025-04-23T10:15:17.383+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='transform' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-04-23T10:15:14.149491+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-23T10:15:14.149491+00:00'
+[2025-04-23T10:15:17.384+0000] {logging_mixin.py:150} INFO - Проверка существования dbt: True
+[2025-04-23T10:15:17.384+0000] {logging_mixin.py:150} INFO - Содержимое каталога dbt_project:
+[2025-04-23T10:15:17.384+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project
+[2025-04-23T10:15:17.384+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['models']
+[2025-04-23T10:15:17.384+0000] {logging_mixin.py:150} INFO -   Файлы: ['dbt_project.yml', 'profiles.yml']
+[2025-04-23T10:15:17.384+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/models
+[2025-04-23T10:15:17.384+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['mart', 'staging', 'intermediate']
+[2025-04-23T10:15:17.384+0000] {logging_mixin.py:150} INFO -   Файлы: []
+[2025-04-23T10:15:17.384+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/models/mart
+[2025-04-23T10:15:17.385+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-04-23T10:15:17.385+0000] {logging_mixin.py:150} INFO -   Файлы: ['fact_client_balance.sql']
+[2025-04-23T10:15:17.385+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/models/staging
+[2025-04-23T10:15:17.385+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-04-23T10:15:17.385+0000] {logging_mixin.py:150} INFO -   Файлы: ['stg_clients.sql', 'stg_transactions.sql', 'stg_rates.sql']
+[2025-04-23T10:15:17.385+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/models/intermediate
+[2025-04-23T10:15:17.385+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-04-23T10:15:17.385+0000] {logging_mixin.py:150} INFO -   Файлы: ['int_daily_transactions.sql']
+[2025-04-23T10:15:19.475+0000] {logging_mixin.py:150} INFO - STDOUT:
+[2025-04-23T10:15:19.476+0000] {logging_mixin.py:150} INFO - STDERR:
+[2025-04-23T10:15:19.476+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/transform.py", line 40, in run_dbt
+    raise Exception(f"dbt command failed with return code {result.returncode}")
+Exception: dbt command failed with return code 2
+[2025-04-23T10:15:19.485+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=transform, task_id=dbt_run, execution_date=20250423T101514, start_date=20250423T101517, end_date=20250423T101519
+[2025-04-23T10:15:19.494+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 12 for task dbt_run (dbt command failed with return code 2; 520)
+[2025-04-23T10:15:19.512+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-04-23T10:15:19.597+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

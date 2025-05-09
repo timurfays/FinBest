@@ -1,0 +1,173 @@
+[2025-04-27T08:14:15.915+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: transform.detect_suspicious manual__2025-04-27T08:12:49.766508+00:00 [queued]>
+[2025-04-27T08:14:15.922+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: transform.detect_suspicious manual__2025-04-27T08:12:49.766508+00:00 [queued]>
+[2025-04-27T08:14:15.922+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 2
+[2025-04-27T08:14:15.933+0000] {taskinstance.py:1327} INFO - Executing <Task(SparkSubmitOperator): detect_suspicious> on 2025-04-27 08:12:49.766508+00:00
+[2025-04-27T08:14:15.937+0000] {standard_task_runner.py:57} INFO - Started process 7585 to run task
+[2025-04-27T08:14:15.939+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'transform', 'detect_suspicious', 'manual__2025-04-27T08:12:49.766508+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/transform.py', '--cfg-path', '/tmp/tmpb0rzm_zm']
+[2025-04-27T08:14:15.940+0000] {standard_task_runner.py:85} INFO - Job 20: Subtask detect_suspicious
+[2025-04-27T08:14:15.982+0000] {task_command.py:410} INFO - Running <TaskInstance: transform.detect_suspicious manual__2025-04-27T08:12:49.766508+00:00 [running]> on host c82426b22b9f
+[2025-04-27T08:14:16.130+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='transform' AIRFLOW_CTX_TASK_ID='detect_suspicious' AIRFLOW_CTX_EXECUTION_DATE='2025-04-27T08:12:49.766508+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-27T08:12:49.766508+00:00'
+[2025-04-27T08:14:16.138+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2025-04-27T08:14:16.139+0000] {spark_submit.py:339} INFO - Spark-Submit cmd: spark-submit --master spark://spark-master:7077 --packages org.postgresql:postgresql:42.6.0,ru.yandex.clickhouse:clickhouse-jdbc:0.3.2 --executor-cores 2 --executor-memory 2g --driver-memory 1g --name arrow-spark /opt/airflow/spark/detect_suspicious.py --jdbc jdbc:postgresql://postgres:5432/finbest --clickhouse-url jdbc:clickhouse://clickhouse:8123/finbest
+[2025-04-27T08:14:17.478+0000] {spark_submit.py:490} INFO - :: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-04-27T08:14:17.559+0000] {spark_submit.py:490} INFO - Ivy Default Cache set to: /home/airflow/.ivy2/cache
+[2025-04-27T08:14:17.559+0000] {spark_submit.py:490} INFO - The jars for the packages stored in: /home/airflow/.ivy2/jars
+[2025-04-27T08:14:17.562+0000] {spark_submit.py:490} INFO - org.postgresql#postgresql added as a dependency
+[2025-04-27T08:14:17.562+0000] {spark_submit.py:490} INFO - ru.yandex.clickhouse#clickhouse-jdbc added as a dependency
+[2025-04-27T08:14:17.563+0000] {spark_submit.py:490} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-8b679734-e386-4e3a-86ce-85a52208fcf2;1.0
+[2025-04-27T08:14:17.563+0000] {spark_submit.py:490} INFO - confs: [default]
+[2025-04-27T08:14:17.635+0000] {spark_submit.py:490} INFO - found org.postgresql#postgresql;42.6.0 in central
+[2025-04-27T08:14:17.650+0000] {spark_submit.py:490} INFO - found org.checkerframework#checker-qual;3.31.0 in central
+[2025-04-27T08:14:17.664+0000] {spark_submit.py:490} INFO - found ru.yandex.clickhouse#clickhouse-jdbc;0.3.2 in central
+[2025-04-27T08:14:17.682+0000] {spark_submit.py:490} INFO - found com.clickhouse#clickhouse-http-client;0.3.2 in central
+[2025-04-27T08:14:17.698+0000] {spark_submit.py:490} INFO - found com.clickhouse#clickhouse-client;0.3.2 in central
+[2025-04-27T08:14:17.710+0000] {spark_submit.py:490} INFO - found org.lz4#lz4-java;1.8.0 in central
+[2025-04-27T08:14:17.725+0000] {spark_submit.py:490} INFO - found com.google.code.gson#gson;2.8.8 in central
+[2025-04-27T08:14:17.738+0000] {spark_submit.py:490} INFO - found org.apache.httpcomponents#httpclient;4.5.13 in central
+[2025-04-27T08:14:17.770+0000] {spark_submit.py:490} INFO - found org.apache.httpcomponents#httpcore;4.4.13 in central
+[2025-04-27T08:14:17.784+0000] {spark_submit.py:490} INFO - found commons-logging#commons-logging;1.2 in central
+[2025-04-27T08:14:17.797+0000] {spark_submit.py:490} INFO - found commons-codec#commons-codec;1.11 in central
+[2025-04-27T08:14:17.809+0000] {spark_submit.py:490} INFO - found org.apache.httpcomponents#httpmime;4.5.13 in central
+[2025-04-27T08:14:17.830+0000] {spark_submit.py:490} INFO - :: resolution report :: resolve 257ms :: artifacts dl 10ms
+[2025-04-27T08:14:17.830+0000] {spark_submit.py:490} INFO - :: modules in use:
+[2025-04-27T08:14:17.830+0000] {spark_submit.py:490} INFO - com.clickhouse#clickhouse-client;0.3.2 from central in [default]
+[2025-04-27T08:14:17.830+0000] {spark_submit.py:490} INFO - com.clickhouse#clickhouse-http-client;0.3.2 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - com.google.code.gson#gson;2.8.8 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - commons-codec#commons-codec;1.11 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - commons-logging#commons-logging;1.2 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - org.apache.httpcomponents#httpclient;4.5.13 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - org.apache.httpcomponents#httpcore;4.4.13 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - org.apache.httpcomponents#httpmime;4.5.13 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - org.lz4#lz4-java;1.8.0 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - ru.yandex.clickhouse#clickhouse-jdbc;0.3.2 from central in [default]
+[2025-04-27T08:14:17.831+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-04-27T08:14:17.832+0000] {spark_submit.py:490} INFO - |                  |            modules            ||   artifacts   |
+[2025-04-27T08:14:17.832+0000] {spark_submit.py:490} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-04-27T08:14:17.832+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-04-27T08:14:17.832+0000] {spark_submit.py:490} INFO - |      default     |   12  |   0   |   0   |   0   ||   12  |   0   |
+[2025-04-27T08:14:17.832+0000] {spark_submit.py:490} INFO - ---------------------------------------------------------------------
+[2025-04-27T08:14:17.836+0000] {spark_submit.py:490} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-8b679734-e386-4e3a-86ce-85a52208fcf2
+[2025-04-27T08:14:17.836+0000] {spark_submit.py:490} INFO - confs: [default]
+[2025-04-27T08:14:17.842+0000] {spark_submit.py:490} INFO - 0 artifacts copied, 12 already retrieved (0kB/6ms)
+[2025-04-27T08:14:18.026+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-04-27T08:14:18.781+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO SparkContext: Running Spark version 3.3.0
+[2025-04-27T08:14:18.797+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO ResourceUtils: ==============================================================
+[2025-04-27T08:14:18.798+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-04-27T08:14:18.798+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO ResourceUtils: ==============================================================
+[2025-04-27T08:14:18.798+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO SparkContext: Submitted application: FinBestDetect
+[2025-04-27T08:14:18.815+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-04-27T08:14:18.825+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+[2025-04-27T08:14:18.826+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-04-27T08:14:18.871+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO SecurityManager: Changing view acls to: airflow
+[2025-04-27T08:14:18.872+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO SecurityManager: Changing modify acls to: airflow
+[2025-04-27T08:14:18.872+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO SecurityManager: Changing view acls groups to:
+[2025-04-27T08:14:18.872+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO SecurityManager: Changing modify acls groups to:
+[2025-04-27T08:14:18.873+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:18 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(airflow); groups with view permissions: Set(); users  with modify permissions: Set(airflow); groups with modify permissions: Set()
+[2025-04-27T08:14:19.084+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Successfully started service 'sparkDriver' on port 37535.
+[2025-04-27T08:14:19.109+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkEnv: Registering MapOutputTracker
+[2025-04-27T08:14:19.136+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkEnv: Registering BlockManagerMaster
+[2025-04-27T08:14:19.152+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-04-27T08:14:19.152+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-04-27T08:14:19.155+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-04-27T08:14:19.173+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-6f397580-d3e8-454d-b064-dcd4c1b01ca5
+[2025-04-27T08:14:19.186+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-04-27T08:14:19.198+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-04-27T08:14:19.348+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-04-27T08:14:19.388+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/org.postgresql_postgresql-42.6.0.jar at spark://c82426b22b9f:37535/jars/org.postgresql_postgresql-42.6.0.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.388+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/ru.yandex.clickhouse_clickhouse-jdbc-0.3.2.jar at spark://c82426b22b9f:37535/jars/ru.yandex.clickhouse_clickhouse-jdbc-0.3.2.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.388+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/org.checkerframework_checker-qual-3.31.0.jar at spark://c82426b22b9f:37535/jars/org.checkerframework_checker-qual-3.31.0.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.388+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/com.clickhouse_clickhouse-http-client-0.3.2.jar at spark://c82426b22b9f:37535/jars/com.clickhouse_clickhouse-http-client-0.3.2.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.388+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/com.google.code.gson_gson-2.8.8.jar at spark://c82426b22b9f:37535/jars/com.google.code.gson_gson-2.8.8.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.388+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/org.apache.httpcomponents_httpclient-4.5.13.jar at spark://c82426b22b9f:37535/jars/org.apache.httpcomponents_httpclient-4.5.13.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.389+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/org.apache.httpcomponents_httpmime-4.5.13.jar at spark://c82426b22b9f:37535/jars/org.apache.httpcomponents_httpmime-4.5.13.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.389+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://c82426b22b9f:37535/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.389+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/com.clickhouse_clickhouse-client-0.3.2.jar at spark://c82426b22b9f:37535/jars/com.clickhouse_clickhouse-client-0.3.2.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.389+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/org.apache.httpcomponents_httpcore-4.4.13.jar at spark://c82426b22b9f:37535/jars/org.apache.httpcomponents_httpcore-4.4.13.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.389+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/commons-logging_commons-logging-1.2.jar at spark://c82426b22b9f:37535/jars/commons-logging_commons-logging-1.2.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.389+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added JAR file:///home/airflow/.ivy2/jars/commons-codec_commons-codec-1.11.jar at spark://c82426b22b9f:37535/jars/commons-codec_commons-codec-1.11.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.392+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/org.postgresql_postgresql-42.6.0.jar at spark://c82426b22b9f:37535/files/org.postgresql_postgresql-42.6.0.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.393+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/org.postgresql_postgresql-42.6.0.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/org.postgresql_postgresql-42.6.0.jar
+[2025-04-27T08:14:19.401+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/ru.yandex.clickhouse_clickhouse-jdbc-0.3.2.jar at spark://c82426b22b9f:37535/files/ru.yandex.clickhouse_clickhouse-jdbc-0.3.2.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.402+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/ru.yandex.clickhouse_clickhouse-jdbc-0.3.2.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/ru.yandex.clickhouse_clickhouse-jdbc-0.3.2.jar
+[2025-04-27T08:14:19.405+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/org.checkerframework_checker-qual-3.31.0.jar at spark://c82426b22b9f:37535/files/org.checkerframework_checker-qual-3.31.0.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.405+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/org.checkerframework_checker-qual-3.31.0.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/org.checkerframework_checker-qual-3.31.0.jar
+[2025-04-27T08:14:19.408+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/com.clickhouse_clickhouse-http-client-0.3.2.jar at spark://c82426b22b9f:37535/files/com.clickhouse_clickhouse-http-client-0.3.2.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.408+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/com.clickhouse_clickhouse-http-client-0.3.2.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/com.clickhouse_clickhouse-http-client-0.3.2.jar
+[2025-04-27T08:14:19.410+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/com.google.code.gson_gson-2.8.8.jar at spark://c82426b22b9f:37535/files/com.google.code.gson_gson-2.8.8.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.410+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/com.google.code.gson_gson-2.8.8.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/com.google.code.gson_gson-2.8.8.jar
+[2025-04-27T08:14:19.414+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/org.apache.httpcomponents_httpclient-4.5.13.jar at spark://c82426b22b9f:37535/files/org.apache.httpcomponents_httpclient-4.5.13.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.414+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/org.apache.httpcomponents_httpclient-4.5.13.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/org.apache.httpcomponents_httpclient-4.5.13.jar
+[2025-04-27T08:14:19.417+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/org.apache.httpcomponents_httpmime-4.5.13.jar at spark://c82426b22b9f:37535/files/org.apache.httpcomponents_httpmime-4.5.13.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.417+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/org.apache.httpcomponents_httpmime-4.5.13.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/org.apache.httpcomponents_httpmime-4.5.13.jar
+[2025-04-27T08:14:19.420+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://c82426b22b9f:37535/files/org.lz4_lz4-java-1.8.0.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.420+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/org.lz4_lz4-java-1.8.0.jar
+[2025-04-27T08:14:19.424+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/com.clickhouse_clickhouse-client-0.3.2.jar at spark://c82426b22b9f:37535/files/com.clickhouse_clickhouse-client-0.3.2.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.424+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/com.clickhouse_clickhouse-client-0.3.2.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/com.clickhouse_clickhouse-client-0.3.2.jar
+[2025-04-27T08:14:19.428+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/org.apache.httpcomponents_httpcore-4.4.13.jar at spark://c82426b22b9f:37535/files/org.apache.httpcomponents_httpcore-4.4.13.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.428+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/org.apache.httpcomponents_httpcore-4.4.13.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/org.apache.httpcomponents_httpcore-4.4.13.jar
+[2025-04-27T08:14:19.431+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/commons-logging_commons-logging-1.2.jar at spark://c82426b22b9f:37535/files/commons-logging_commons-logging-1.2.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.432+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/commons-logging_commons-logging-1.2.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/commons-logging_commons-logging-1.2.jar
+[2025-04-27T08:14:19.435+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SparkContext: Added file file:///home/airflow/.ivy2/jars/commons-codec_commons-codec-1.11.jar at spark://c82426b22b9f:37535/files/commons-codec_commons-codec-1.11.jar with timestamp 1745741658775
+[2025-04-27T08:14:19.435+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Copying /home/airflow/.ivy2/jars/commons-codec_commons-codec-1.11.jar to /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/userFiles-5c968e04-945e-4cfd-969b-1d1bf8fc7764/commons-codec_commons-codec-1.11.jar
+[2025-04-27T08:14:19.504+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+[2025-04-27T08:14:19.536+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO TransportClientFactory: Successfully created connection to spark-master/172.18.0.2:7077 after 19 ms (0 ms spent in bootstraps)
+[2025-04-27T08:14:19.601+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20250427081419-0007
+[2025-04-27T08:14:19.605+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36371.
+[2025-04-27T08:14:19.606+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO NettyBlockTransferService: Server created on c82426b22b9f:36371
+[2025-04-27T08:14:19.607+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-04-27T08:14:19.612+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, c82426b22b9f, 36371, None)
+[2025-04-27T08:14:19.614+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO BlockManagerMasterEndpoint: Registering block manager c82426b22b9f:36371 with 434.4 MiB RAM, BlockManagerId(driver, c82426b22b9f, 36371, None)
+[2025-04-27T08:14:19.616+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, c82426b22b9f, 36371, None)
+[2025-04-27T08:14:19.617+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, c82426b22b9f, 36371, None)
+[2025-04-27T08:14:19.749+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2025-04-27T08:14:19.898+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2025-04-27T08:14:19.899+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:19 INFO SharedState: Warehouse path is 'file:/opt/airflow/spark-warehouse'.
+[2025-04-27T08:14:21.995+0000] {spark_submit.py:490} INFO - Traceback (most recent call last):
+[2025-04-27T08:14:21.995+0000] {spark_submit.py:490} INFO - File "/opt/airflow/spark/detect_suspicious.py", line 76, in <module>
+[2025-04-27T08:14:21.995+0000] {spark_submit.py:490} INFO - susp = large.unionByName(freq) \
+[2025-04-27T08:14:21.995+0000] {spark_submit.py:490} INFO - File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 2314, in unionByName
+[2025-04-27T08:14:21.995+0000] {spark_submit.py:490} INFO - File "/opt/spark/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2025-04-27T08:14:21.995+0000] {spark_submit.py:490} INFO - File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 196, in deco
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - pyspark.sql.utils.AnalysisException: Union can only be performed on tables with the same number of columns, but the first table has 11 columns and the second table has 12 columns;
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - 'Union false, false
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - :- Project [transaction_id#0, client_id#1, datetime#2, amount#3, currency#4, merchant#5, transaction_type#6, ip_network#7, ts#16L, large_tx AS rule_triggered#26, 70 AS risk_score#37]
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - :  +- Filter (amount#3 > cast(600000 as double))
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - :     +- Project [transaction_id#0, client_id#1, datetime#2, amount#3, currency#4, merchant#5, transaction_type#6, ip_network#7, cast(datetime#2 as bigint) AS ts#16L]
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - :        +- Relation [transaction_id#0,client_id#1,datetime#2,amount#3,currency#4,merchant#5,transaction_type#6,ip_network#7] JDBCRelation(raw.masked_transactions) [numPartitions=1]
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - +- Project [transaction_id#86 AS transaction_id#94, client_id#87 AS client_id#95, datetime#88 AS datetime#96, amount#89 AS amount#97, currency#90 AS currency#98, merchant#91 AS merchant#99, transaction_type#92 AS transaction_type#100, ip_network#93 AS ip_network#101, ts#16L AS ts#102L, rule_triggered#61 AS rule_triggered#103, risk_score#73 AS risk_score#104, cnt#50L AS cnt#105L]
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - +- Project [transaction_id#86, client_id#87, datetime#88, amount#89, currency#90, merchant#91, transaction_type#92, ip_network#93, ts#16L, freq_tx AS rule_triggered#61, 50 AS risk_score#73, cnt#50L]
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - +- Filter (cnt#50L > cast(10 as bigint))
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - +- Project [transaction_id#86, client_id#87, datetime#88, amount#89, currency#90, merchant#91, transaction_type#92, ip_network#93, ts#16L, cnt#50L]
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - +- Project [transaction_id#86, client_id#87, datetime#88, amount#89, currency#90, merchant#91, transaction_type#92, ip_network#93, ts#16L, cnt#50L, cnt#50L]
+[2025-04-27T08:14:21.999+0000] {spark_submit.py:490} INFO - +- Window [count(transaction_id#86) windowspecdefinition(client_id#87, ts#16L ASC NULLS FIRST, specifiedwindowframe(RangeFrame, -86400, currentrow$())) AS cnt#50L], [client_id#87], [ts#16L ASC NULLS FIRST]
+[2025-04-27T08:14:22.000+0000] {spark_submit.py:490} INFO - +- Project [transaction_id#86, client_id#87, datetime#88, amount#89, currency#90, merchant#91, transaction_type#92, ip_network#93, ts#16L]
+[2025-04-27T08:14:22.000+0000] {spark_submit.py:490} INFO - +- Project [transaction_id#86, client_id#87, datetime#88, amount#89, currency#90, merchant#91, transaction_type#92, ip_network#93, cast(datetime#88 as bigint) AS ts#16L]
+[2025-04-27T08:14:22.000+0000] {spark_submit.py:490} INFO - +- Relation [transaction_id#86,client_id#87,datetime#88,amount#89,currency#90,merchant#91,transaction_type#92,ip_network#93] JDBCRelation(raw.masked_transactions) [numPartitions=1]
+[2025-04-27T08:14:22.000+0000] {spark_submit.py:490} INFO - 
+[2025-04-27T08:14:22.025+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO SparkContext: Invoking stop() from shutdown hook
+[2025-04-27T08:14:22.033+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO SparkUI: Stopped Spark web UI at http://c82426b22b9f:4040
+[2025-04-27T08:14:22.036+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO StandaloneSchedulerBackend: Shutting down all executors
+[2025-04-27T08:14:22.040+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+[2025-04-27T08:14:22.054+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2025-04-27T08:14:22.063+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO MemoryStore: MemoryStore cleared
+[2025-04-27T08:14:22.063+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO BlockManager: BlockManager stopped
+[2025-04-27T08:14:22.072+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2025-04-27T08:14:22.074+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2025-04-27T08:14:22.079+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO SparkContext: Successfully stopped SparkContext
+[2025-04-27T08:14:22.080+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO ShutdownHookManager: Shutdown hook called
+[2025-04-27T08:14:22.080+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO ShutdownHookManager: Deleting directory /tmp/spark-3cea350d-96b3-4cdf-98ca-15d5b6dc5a93
+[2025-04-27T08:14:22.083+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO ShutdownHookManager: Deleting directory /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200
+[2025-04-27T08:14:22.085+0000] {spark_submit.py:490} INFO - 25/04/27 08:14:22 INFO ShutdownHookManager: Deleting directory /tmp/spark-65e5984e-8175-45a2-847a-1e2115013200/pyspark-ebae2ab3-3fb2-45b6-9479-0582b1d916ed
+[2025-04-27T08:14:22.125+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 422, in submit
+    f"Cannot execute: {self._mask_cmd(spark_submit_cmd)}. Error code is: {returncode}."
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://spark-master:7077 --packages org.postgresql:postgresql:42.6.0,ru.yandex.clickhouse:clickhouse-jdbc:0.3.2 --executor-cores 2 --executor-memory 2g --driver-memory 1g --name arrow-spark /opt/airflow/spark/detect_suspicious.py --jdbc jdbc:postgresql://postgres:5432/finbest --clickhouse-url jdbc:clickhouse://clickhouse:8123/finbest. Error code is: 1.
+[2025-04-27T08:14:22.128+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=transform, task_id=detect_suspicious, execution_date=20250427T081249, start_date=20250427T081415, end_date=20250427T081422
+[2025-04-27T08:14:22.137+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 20 for task detect_suspicious (Cannot execute: spark-submit --master spark://spark-master:7077 --packages org.postgresql:postgresql:42.6.0,ru.yandex.clickhouse:clickhouse-jdbc:0.3.2 --executor-cores 2 --executor-memory 2g --driver-memory 1g --name arrow-spark /opt/airflow/spark/detect_suspicious.py --jdbc jdbc:postgresql://postgres:5432/finbest --clickhouse-url jdbc:clickhouse://clickhouse:8123/finbest. Error code is: 1.; 7585)
+[2025-04-27T08:14:22.163+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-04-27T08:14:22.247+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

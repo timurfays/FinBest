@@ -1,0 +1,24 @@
+[2025-04-29T21:47:37.438+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: superset_sync.dataset manual__2025-04-29T21:45:32.025830+00:00 [queued]>
+[2025-04-29T21:47:37.443+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: superset_sync.dataset manual__2025-04-29T21:45:32.025830+00:00 [queued]>
+[2025-04-29T21:47:37.444+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 2
+[2025-04-29T21:47:37.453+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): dataset> on 2025-04-29 21:45:32.025830+00:00
+[2025-04-29T21:47:37.456+0000] {standard_task_runner.py:57} INFO - Started process 835 to run task
+[2025-04-29T21:47:37.458+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'superset_sync', 'dataset', 'manual__2025-04-29T21:45:32.025830+00:00', '--job-id', '131', '--raw', '--subdir', 'DAGS_FOLDER/superset_sync.py', '--cfg-path', '/tmp/tmpe56zka8p']
+[2025-04-29T21:47:37.459+0000] {standard_task_runner.py:85} INFO - Job 131: Subtask dataset
+[2025-04-29T21:47:37.495+0000] {task_command.py:410} INFO - Running <TaskInstance: superset_sync.dataset manual__2025-04-29T21:45:32.025830+00:00 [running]> on host 719b7b43b976
+[2025-04-29T21:47:37.633+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='superset_sync' AIRFLOW_CTX_TASK_ID='dataset' AIRFLOW_CTX_EXECUTION_DATE='2025-04-29T21:45:32.025830+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-29T21:45:32.025830+00:00'
+[2025-04-29T21:47:37.906+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/superset_sync.py", line 128, in task_datasets
+    pg_ds_id = _ensure_dataset(sess, head, pg_db_id)
+  File "/opt/airflow/dags/superset_sync.py", line 120, in _ensure_dataset
+    raise RuntimeError(f"Ошибка создания датасета: {r.text}")
+RuntimeError: Ошибка создания датасета: {"errors": [{"message": "400 Bad Request: The CSRF session token is missing.", "error_type": "GENERIC_BACKEND_ERROR", "level": "error", "extra": {"issue_codes": [{"code": 1011, "message": "Issue 1011 - Superset encountered an unexpected error."}]}}]}
+[2025-04-29T21:47:37.914+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=superset_sync, task_id=dataset, execution_date=20250429T214532, start_date=20250429T214737, end_date=20250429T214737
+[2025-04-29T21:47:37.921+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 131 for task dataset (Ошибка создания датасета: {"errors": [{"message": "400 Bad Request: The CSRF session token is missing.", "error_type": "GENERIC_BACKEND_ERROR", "level": "error", "extra": {"issue_codes": [{"code": 1011, "message": "Issue 1011 - Superset encountered an unexpected error."}]}}]}; 835)
+[2025-04-29T21:47:37.951+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-04-29T21:47:37.984+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

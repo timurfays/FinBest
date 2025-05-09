@@ -1,0 +1,81 @@
+[2025-05-09T12:33:00.744+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: graph_analysis.create_mart manual__2025-05-09T12:30:21.406997+00:00 [queued]>
+[2025-05-09T12:33:00.751+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: graph_analysis.create_mart manual__2025-05-09T12:30:21.406997+00:00 [queued]>
+[2025-05-09T12:33:00.752+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2025-05-09T12:33:00.761+0000] {taskinstance.py:1327} INFO - Executing <Task(PostgresOperator): create_mart> on 2025-05-09 12:30:21.406997+00:00
+[2025-05-09T12:33:00.765+0000] {standard_task_runner.py:57} INFO - Started process 15238 to run task
+[2025-05-09T12:33:00.767+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'graph_analysis', 'create_mart', 'manual__2025-05-09T12:30:21.406997+00:00', '--job-id', '396', '--raw', '--subdir', 'DAGS_FOLDER/graph_analysis.py', '--cfg-path', '/tmp/tmpv7d4t50y']
+[2025-05-09T12:33:00.768+0000] {standard_task_runner.py:85} INFO - Job 396: Subtask create_mart
+[2025-05-09T12:33:00.781+0000] {logging_mixin.py:150} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-09T12:33:00.814+0000] {task_command.py:410} INFO - Running <TaskInstance: graph_analysis.create_mart manual__2025-05-09T12:30:21.406997+00:00 [running]> on host d3632ec65b22
+[2025-05-09T12:33:00.898+0000] {taskinstance.py:1545} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='graph_analysis' AIRFLOW_CTX_TASK_ID='create_mart' AIRFLOW_CTX_EXECUTION_DATE='2025-05-09T12:30:21.406997+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-09T12:30:21.406997+00:00'
+[2025-05-09T12:33:00.898+0000] {sql.py:265} INFO - Executing: 
+    INSERT INTO mart.fact_graph_analytics (
+        transaction_id, client_id, datetime, amount, currency, 
+        merchant, transaction_type, ip_network, category,
+        community_id, influence_score, community_size, w_degree
+    )
+    SELECT 
+        t.transaction_id, 
+        t.client_id, 
+        t.datetime, 
+        t.amount, 
+        t.currency, 
+        t.merchant, 
+        t.transaction_type, 
+        t.ip_network, 
+        t.category,
+        c.community_id, 
+        c.influence_score, 
+        c.community_size,
+        c.w_degree
+    FROM 
+        raw.masked_transactions t
+    LEFT JOIN 
+        graph.client_communities c ON t.client_id = c.client_id
+    ON CONFLICT (transaction_id) 
+    DO UPDATE SET
+        community_id = EXCLUDED.community_id,
+        influence_score = EXCLUDED.influence_score,
+        community_size = EXCLUDED.community_size,
+        w_degree = EXCLUDED.w_degree,
+        created_at = NOW();
+    
+[2025-05-09T12:33:00.899+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-05-09T12:33:00.899+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-09T12:33:00.976+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-09T12:33:00.981+0000] {sql.py:374} INFO - Running statement: 
+    INSERT INTO mart.fact_graph_analytics (
+        transaction_id, client_id, datetime, amount, currency, 
+        merchant, transaction_type, ip_network, category,
+        community_id, influence_score, community_size, w_degree
+    )
+    SELECT 
+        t.transaction_id, 
+        t.client_id, 
+        t.datetime, 
+        t.amount, 
+        t.currency, 
+        t.merchant, 
+        t.transaction_type, 
+        t.ip_network, 
+        t.category,
+        c.community_id, 
+        c.influence_score, 
+        c.community_size,
+        c.w_degree
+    FROM 
+        raw.masked_transactions t
+    LEFT JOIN 
+        graph.client_communities c ON t.client_id = c.client_id
+    ON CONFLICT (transaction_id) 
+    DO UPDATE SET
+        community_id = EXCLUDED.community_id,
+        influence_score = EXCLUDED.influence_score,
+        community_size = EXCLUDED.community_size,
+        w_degree = EXCLUDED.w_degree,
+        created_at = NOW();
+    , parameters: None
+[2025-05-09T12:33:01.102+0000] {sql.py:383} INFO - Rows affected: 4652
+[2025-05-09T12:33:01.113+0000] {taskinstance.py:1345} INFO - Marking task as SUCCESS. dag_id=graph_analysis, task_id=create_mart, execution_date=20250509T123021, start_date=20250509T123300, end_date=20250509T123301
+[2025-05-09T12:33:01.140+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-05-09T12:33:01.170+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

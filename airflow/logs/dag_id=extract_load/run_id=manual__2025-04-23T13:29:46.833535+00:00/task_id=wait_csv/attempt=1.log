@@ -1,0 +1,16 @@
+[2025-04-23T13:29:57.004+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_load.wait_csv manual__2025-04-23T13:29:46.833535+00:00 [queued]>
+[2025-04-23T13:29:57.012+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_load.wait_csv manual__2025-04-23T13:29:46.833535+00:00 [queued]>
+[2025-04-23T13:29:57.012+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-04-23T13:29:57.023+0000] {taskinstance.py:1327} INFO - Executing <Task(FileSensor): wait_csv> on 2025-04-23 13:29:46.833535+00:00
+[2025-04-23T13:29:57.028+0000] {standard_task_runner.py:57} INFO - Started process 128 to run task
+[2025-04-23T13:29:57.031+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'extract_load', 'wait_csv', 'manual__2025-04-23T13:29:46.833535+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpx5b9mv6u']
+[2025-04-23T13:29:57.032+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask wait_csv
+[2025-04-23T13:29:57.072+0000] {task_command.py:410} INFO - Running <TaskInstance: extract_load.wait_csv manual__2025-04-23T13:29:46.833535+00:00 [running]> on host 067f3e9d3d0e
+[2025-04-23T13:29:57.141+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='extract_load' AIRFLOW_CTX_TASK_ID='wait_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-04-23T13:29:46.833535+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-23T13:29:46.833535+00:00'
+[2025-04-23T13:29:57.160+0000] {base.py:73} INFO - Using connection ID 'fs_default' for task execution.
+[2025-04-23T13:29:57.160+0000] {filesystem.py:64} INFO - Poking for file /data/bank_transactions.csv
+[2025-04-23T13:29:57.160+0000] {filesystem.py:69} INFO - Found File /data/bank_transactions.csv last modified: 20250423132949
+[2025-04-23T13:29:57.160+0000] {base.py:255} INFO - Success criteria met. Exiting.
+[2025-04-23T13:29:57.169+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=extract_load, task_id=wait_csv, execution_date=20250423T132946, start_date=20250423T132957, end_date=20250423T132957
+[2025-04-23T13:29:57.202+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-04-23T13:29:57.225+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

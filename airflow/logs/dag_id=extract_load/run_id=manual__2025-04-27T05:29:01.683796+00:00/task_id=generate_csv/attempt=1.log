@@ -1,0 +1,13 @@
+[2025-04-27T05:29:04.322+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_load.generate_csv manual__2025-04-27T05:29:01.683796+00:00 [queued]>
+[2025-04-27T05:29:04.328+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_load.generate_csv manual__2025-04-27T05:29:01.683796+00:00 [queued]>
+[2025-04-27T05:29:04.329+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-04-27T05:29:04.338+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): generate_csv> on 2025-04-27 05:29:01.683796+00:00
+[2025-04-27T05:29:04.343+0000] {standard_task_runner.py:57} INFO - Started process 92 to run task
+[2025-04-27T05:29:04.345+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'extract_load', 'generate_csv', 'manual__2025-04-27T05:29:01.683796+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpdidme6zo']
+[2025-04-27T05:29:04.346+0000] {standard_task_runner.py:85} INFO - Job 2: Subtask generate_csv
+[2025-04-27T05:29:04.387+0000] {task_command.py:410} INFO - Running <TaskInstance: extract_load.generate_csv manual__2025-04-27T05:29:01.683796+00:00 [running]> on host c82426b22b9f
+[2025-04-27T05:29:04.456+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='extract_load' AIRFLOW_CTX_TASK_ID='generate_csv' AIRFLOW_CTX_EXECUTION_DATE='2025-04-27T05:29:01.683796+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-27T05:29:01.683796+00:00'
+[2025-04-27T05:29:04.474+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-04-27T05:29:04.484+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=extract_load, task_id=generate_csv, execution_date=20250427T052901, start_date=20250427T052904, end_date=20250427T052904
+[2025-04-27T05:29:04.517+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-04-27T05:29:04.555+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

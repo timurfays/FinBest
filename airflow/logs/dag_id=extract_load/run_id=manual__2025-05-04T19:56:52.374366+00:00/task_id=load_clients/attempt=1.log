@@ -1,0 +1,29 @@
+[2025-05-04T19:57:06.482+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_load.load_clients manual__2025-05-04T19:56:52.374366+00:00 [queued]>
+[2025-05-04T19:57:06.490+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_load.load_clients manual__2025-05-04T19:56:52.374366+00:00 [queued]>
+[2025-05-04T19:57:06.490+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-05-04T19:57:06.501+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_clients> on 2025-05-04 19:56:52.374366+00:00
+[2025-05-04T19:57:06.506+0000] {standard_task_runner.py:57} INFO - Started process 5037 to run task
+[2025-05-04T19:57:06.508+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'extract_load', 'load_clients', 'manual__2025-05-04T19:56:52.374366+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpbex5mc8y']
+[2025-05-04T19:57:06.509+0000] {standard_task_runner.py:85} INFO - Job 142: Subtask load_clients
+[2025-05-04T19:57:06.522+0000] {logging_mixin.py:150} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-04T19:57:06.551+0000] {task_command.py:410} INFO - Running <TaskInstance: extract_load.load_clients manual__2025-05-04T19:56:52.374366+00:00 [running]> on host 773728ee9afd
+[2025-05-04T19:57:06.626+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='extract_load' AIRFLOW_CTX_TASK_ID='load_clients' AIRFLOW_CTX_EXECUTION_DATE='2025-05-04T19:56:52.374366+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-04T19:56:52.374366+00:00'
+[2025-05-04T19:57:06.633+0000] {logging_mixin.py:150} INFO - Загружено 1200 строк из /data/clients.csv
+[2025-05-04T19:57:06.633+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-05-04T19:57:06.634+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-04T19:57:06.638+0000] {sql.py:375} INFO - Running statement: 
+    SELECT column_name 
+    FROM information_schema.columns 
+    WHERE table_schema = 'staging' AND table_name = 'clients'
+    , parameters: None
+[2025-05-04T19:57:06.642+0000] {sql.py:384} INFO - Rows affected: 7
+[2025-05-04T19:57:06.642+0000] {logging_mixin.py:150} INFO - Столбцы в БД для clients: ['client_id', 'first_name', 'last_name', 'email', 'passport_id', 'registration_date', 'status']
+[2025-05-04T19:57:06.642+0000] {logging_mixin.py:150} INFO - Используем столбцы для clients: ['client_id', 'first_name', 'last_name', 'email', 'passport_id', 'registration_date', 'status']
+[2025-05-04T19:57:06.644+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-04T19:57:06.648+0000] {sql.py:375} INFO - Running statement: TRUNCATE TABLE staging.clients, parameters: None
+[2025-05-04T19:57:06.652+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-04T19:57:06.923+0000] {logging_mixin.py:150} INFO - Данные загружены в staging.clients
+[2025-05-04T19:57:06.923+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-05-04T19:57:06.932+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=extract_load, task_id=load_clients, execution_date=20250504T195652, start_date=20250504T195706, end_date=20250504T195706
+[2025-05-04T19:57:06.960+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-05-04T19:57:06.980+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

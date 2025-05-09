@@ -1,0 +1,16 @@
+[2025-04-29T23:00:35.403+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_load.load_clients manual__2025-04-29T23:00:30.085653+00:00 [queued]>
+[2025-04-29T23:00:35.409+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_load.load_clients manual__2025-04-29T23:00:30.085653+00:00 [queued]>
+[2025-04-29T23:00:35.409+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-04-29T23:00:35.419+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_clients> on 2025-04-29 23:00:30.085653+00:00
+[2025-04-29T23:00:35.423+0000] {standard_task_runner.py:57} INFO - Started process 507 to run task
+[2025-04-29T23:00:35.425+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'extract_load', 'load_clients', 'manual__2025-04-29T23:00:30.085653+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpapujckcr']
+[2025-04-29T23:00:35.426+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask load_clients
+[2025-04-29T23:00:35.461+0000] {task_command.py:410} INFO - Running <TaskInstance: extract_load.load_clients manual__2025-04-29T23:00:30.085653+00:00 [running]> on host f349d8d6503e
+[2025-04-29T23:00:35.523+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='extract_load' AIRFLOW_CTX_TASK_ID='load_clients' AIRFLOW_CTX_EXECUTION_DATE='2025-04-29T23:00:30.085653+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-29T23:00:30.085653+00:00'
+[2025-04-29T23:00:35.535+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-04-29T23:00:35.539+0000] {sql.py:375} INFO - Running statement: TRUNCATE TABLE staging.clients, parameters: None
+[2025-04-29T23:00:35.551+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-04-29T23:00:35.574+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-04-29T23:00:35.584+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=extract_load, task_id=load_clients, execution_date=20250429T230030, start_date=20250429T230035, end_date=20250429T230035
+[2025-04-29T23:00:35.597+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-04-29T23:00:35.612+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

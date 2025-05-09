@@ -1,0 +1,18 @@
+[2025-05-04T11:19:17.339+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_load.load_clients manual__2025-05-04T11:19:11.207839+00:00 [queued]>
+[2025-05-04T11:19:17.346+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_load.load_clients manual__2025-05-04T11:19:11.207839+00:00 [queued]>
+[2025-05-04T11:19:17.346+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-05-04T11:19:17.357+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_clients> on 2025-05-04 11:19:11.207839+00:00
+[2025-05-04T11:19:17.361+0000] {standard_task_runner.py:57} INFO - Started process 115 to run task
+[2025-05-04T11:19:17.364+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'extract_load', 'load_clients', 'manual__2025-05-04T11:19:11.207839+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpx9vbhwkq']
+[2025-05-04T11:19:17.365+0000] {standard_task_runner.py:85} INFO - Job 100: Subtask load_clients
+[2025-05-04T11:19:17.376+0000] {logging_mixin.py:150} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-04T11:19:17.401+0000] {task_command.py:410} INFO - Running <TaskInstance: extract_load.load_clients manual__2025-05-04T11:19:11.207839+00:00 [running]> on host dc2cd69ae098
+[2025-05-04T11:19:17.481+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='extract_load' AIRFLOW_CTX_TASK_ID='load_clients' AIRFLOW_CTX_EXECUTION_DATE='2025-05-04T11:19:11.207839+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-04T11:19:11.207839+00:00'
+[2025-05-04T11:19:17.485+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-05-04T11:19:17.485+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-04T11:19:17.489+0000] {sql.py:375} INFO - Running statement: TRUNCATE TABLE staging.clients, parameters: None
+[2025-05-04T11:19:17.504+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-04T11:19:17.544+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-05-04T11:19:17.553+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=extract_load, task_id=load_clients, execution_date=20250504T111911, start_date=20250504T111917, end_date=20250504T111917
+[2025-05-04T11:19:17.575+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-05-04T11:19:17.591+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,74 @@
+[2025-05-04T19:59:04.507+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: graph_analysis.create_schema manual__2025-05-04T19:59:02.289589+00:00 [queued]>
+[2025-05-04T19:59:04.514+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: graph_analysis.create_schema manual__2025-05-04T19:59:02.289589+00:00 [queued]>
+[2025-05-04T19:59:04.514+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-05-04T19:59:04.526+0000] {taskinstance.py:1327} INFO - Executing <Task(PostgresOperator): create_schema> on 2025-05-04 19:59:02.289589+00:00
+[2025-05-04T19:59:04.529+0000] {standard_task_runner.py:57} INFO - Started process 5149 to run task
+[2025-05-04T19:59:04.532+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'graph_analysis', 'create_schema', 'manual__2025-05-04T19:59:02.289589+00:00', '--job-id', '145', '--raw', '--subdir', 'DAGS_FOLDER/graph_analysis.py', '--cfg-path', '/tmp/tmpqv9sgp8u']
+[2025-05-04T19:59:04.533+0000] {standard_task_runner.py:85} INFO - Job 145: Subtask create_schema
+[2025-05-04T19:59:04.545+0000] {logging_mixin.py:150} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-04T19:59:04.575+0000] {task_command.py:410} INFO - Running <TaskInstance: graph_analysis.create_schema manual__2025-05-04T19:59:02.289589+00:00 [running]> on host 773728ee9afd
+[2025-05-04T19:59:04.725+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='graph_analysis' AIRFLOW_CTX_TASK_ID='create_schema' AIRFLOW_CTX_EXECUTION_DATE='2025-05-04T19:59:02.289589+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-04T19:59:02.289589+00:00'
+[2025-05-04T19:59:04.725+0000] {sql.py:265} INFO - Executing: 
+    CREATE SCHEMA IF NOT EXISTS graph;
+    
+    -- Таблица с результатами анализа графа
+    CREATE TABLE IF NOT EXISTS graph.client_communities (
+        client_id VARCHAR PRIMARY KEY,
+        community_id INT,
+        influence_score FLOAT,
+        community_size INT,
+        created_at TIMESTAMP DEFAULT NOW()
+    );
+    
+    -- Витрина данных с результатами графового анализа
+    CREATE TABLE IF NOT EXISTS mart.fact_graph_analytics (
+        transaction_id VARCHAR PRIMARY KEY,
+        client_id VARCHAR,
+        datetime TIMESTAMP,
+        amount NUMERIC,
+        currency VARCHAR(3),
+        merchant VARCHAR,
+        transaction_type VARCHAR,
+        ip_network VARCHAR,
+        category VARCHAR,
+        community_id INT,
+        influence_score FLOAT,
+        community_size INT,
+        created_at TIMESTAMP DEFAULT NOW()
+    );
+    
+[2025-05-04T19:59:04.726+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-05-04T19:59:04.726+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-04T19:59:04.828+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-04T19:59:04.833+0000] {sql.py:375} INFO - Running statement: 
+    CREATE SCHEMA IF NOT EXISTS graph;
+    
+    -- Таблица с результатами анализа графа
+    CREATE TABLE IF NOT EXISTS graph.client_communities (
+        client_id VARCHAR PRIMARY KEY,
+        community_id INT,
+        influence_score FLOAT,
+        community_size INT,
+        created_at TIMESTAMP DEFAULT NOW()
+    );
+    
+    -- Витрина данных с результатами графового анализа
+    CREATE TABLE IF NOT EXISTS mart.fact_graph_analytics (
+        transaction_id VARCHAR PRIMARY KEY,
+        client_id VARCHAR,
+        datetime TIMESTAMP,
+        amount NUMERIC,
+        currency VARCHAR(3),
+        merchant VARCHAR,
+        transaction_type VARCHAR,
+        ip_network VARCHAR,
+        category VARCHAR,
+        community_id INT,
+        influence_score FLOAT,
+        community_size INT,
+        created_at TIMESTAMP DEFAULT NOW()
+    );
+    , parameters: None
+[2025-05-04T19:59:04.859+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=graph_analysis, task_id=create_schema, execution_date=20250504T195902, start_date=20250504T195904, end_date=20250504T195904
+[2025-05-04T19:59:04.904+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-05-04T19:59:04.998+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

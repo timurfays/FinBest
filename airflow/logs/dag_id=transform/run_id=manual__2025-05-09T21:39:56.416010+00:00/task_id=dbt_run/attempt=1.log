@@ -1,0 +1,492 @@
+[2025-05-09T21:39:59.352+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: transform.dbt_run manual__2025-05-09T21:39:56.416010+00:00 [queued]>
+[2025-05-09T21:39:59.357+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: transform.dbt_run manual__2025-05-09T21:39:56.416010+00:00 [queued]>
+[2025-05-09T21:39:59.357+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-05-09T21:39:59.365+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): dbt_run> on 2025-05-09 21:39:56.416010+00:00
+[2025-05-09T21:39:59.369+0000] {standard_task_runner.py:57} INFO - Started process 23348 to run task
+[2025-05-09T21:39:59.371+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'transform', 'dbt_run', 'manual__2025-05-09T21:39:56.416010+00:00', '--job-id', '403', '--raw', '--subdir', 'DAGS_FOLDER/transform.py', '--cfg-path', '/tmp/tmpu0byjdgg']
+[2025-05-09T21:39:59.371+0000] {standard_task_runner.py:85} INFO - Job 403: Subtask dbt_run
+[2025-05-09T21:39:59.382+0000] {logging_mixin.py:150} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-09T21:39:59.405+0000] {task_command.py:410} INFO - Running <TaskInstance: transform.dbt_run manual__2025-05-09T21:39:56.416010+00:00 [running]> on host d3632ec65b22
+[2025-05-09T21:39:59.463+0000] {taskinstance.py:1545} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='transform' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2025-05-09T21:39:56.416010+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-09T21:39:56.416010+00:00'
+[2025-05-09T21:39:59.464+0000] {logging_mixin.py:150} INFO - Проверка существования dbt: True
+[2025-05-09T21:39:59.464+0000] {logging_mixin.py:150} INFO - Содержимое каталога /dbt_project:
+[2025-05-09T21:39:59.464+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project
+[2025-05-09T21:39:59.464+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['logs', 'dbt_packages', 'models', 'target']
+[2025-05-09T21:39:59.464+0000] {logging_mixin.py:150} INFO -   Файлы: ['dbt_project.yml', 'profiles.yml', '.user.yml']
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/logs
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO -   Файлы: ['dbt.log']
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/dbt_packages
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO -   Файлы: []
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/models
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['mart', 'staging', 'intermediate']
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO -   Файлы: []
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/models/mart
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.465+0000] {logging_mixin.py:150} INFO -   Файлы: ['fact_client_balance.sql']
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/models/staging
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO -   Файлы: ['stg_clients.sql', 'stg_transactions.sql', 'stg_rates.sql']
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/models/intermediate
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO -   Файлы: ['int_daily_transactions.sql']
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['compiled', 'run']
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO -   Файлы: ['run_results.json', 'partial_parse.msgpack', 'manifest.json', 'graph.gpickle']
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/compiled
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['finbest']
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO -   Файлы: []
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/compiled/finbest
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['models']
+[2025-05-09T21:39:59.466+0000] {logging_mixin.py:150} INFO -   Файлы: []
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/compiled/finbest/models
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['mart', 'staging', 'intermediate']
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO -   Файлы: []
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/compiled/finbest/models/mart
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO -   Файлы: ['fact_client_balance.sql']
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/compiled/finbest/models/staging
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO -   Файлы: ['stg_clients.sql', 'stg_transactions.sql', 'stg_rates.sql']
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/compiled/finbest/models/intermediate
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO -   Файлы: ['int_daily_transactions.sql']
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/run
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['finbest']
+[2025-05-09T21:39:59.467+0000] {logging_mixin.py:150} INFO -   Файлы: []
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/run/finbest
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['models']
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO -   Файлы: []
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/run/finbest/models
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO -   Поддиректории: ['mart', 'staging', 'intermediate']
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO -   Файлы: []
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/run/finbest/models/mart
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO -   Файлы: ['fact_client_balance.sql']
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/run/finbest/models/staging
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO -   Файлы: ['stg_clients.sql', 'stg_transactions.sql', 'stg_rates.sql']
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO - Директория: /dbt_project/target/run/finbest/models/intermediate
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO -   Поддиректории: []
+[2025-05-09T21:39:59.468+0000] {logging_mixin.py:150} INFO -   Файлы: ['int_daily_transactions.sql']
+[2025-05-09T21:40:03.787+0000] {logging_mixin.py:150} INFO - STDOUT:
+[2025-05-09T21:40:03.789+0000] {logging_mixin.py:150} INFO - 21:40:01  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5895a77070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d58964c9250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d58964c91c0>]}
+21:40:01  Running with dbt=1.5.11
+21:40:01  running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/dbt_project', 'debug': 'True', 'fail_fast': 'False', 'log_path': '/dbt_project/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+21:40:01  Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5893b944f0>]}
+21:40:01  Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5893b26be0>]}
+21:40:01  Registered adapter: postgres=1.5.11
+21:40:01  checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+21:40:01  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+21:40:01  Partial parsing enabled, no changes found, skipping parsing
+21:40:01  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d589218c3a0>]}
+21:40:01  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d589353e550>]}
+21:40:01  Found 5 models, 0 tests, 0 snapshots, 0 analyses, 310 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+21:40:01  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d589353e520>]}
+21:40:01  
+21:40:01  Acquiring new postgres connection 'master'
+21:40:01  Acquiring new postgres connection 'list_finbest'
+21:40:01  Using postgres connection "list_finbest"
+21:40:01  On list_finbest: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "connection_name": "list_finbest"} */
+
+    select distinct nspname from pg_namespace
+  
+21:40:01  Opening a new connection, currently in state init
+21:40:01  SQL status: SELECT 8 in 0.0 seconds
+21:40:01  On list_finbest: Close
+21:40:01  Acquiring new postgres connection 'list_finbest_mart'
+21:40:01  Using postgres connection "list_finbest_mart"
+21:40:01  On list_finbest_mart: BEGIN
+21:40:01  Opening a new connection, currently in state init
+21:40:01  SQL status: BEGIN in 0.0 seconds
+21:40:01  Using postgres connection "list_finbest_mart"
+21:40:01  On list_finbest_mart: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "connection_name": "list_finbest_mart"} */
+select
+      'finbest' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'mart'
+    union all
+    select
+      'finbest' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'mart'
+  
+21:40:01  SQL status: SELECT 8 in 0.0 seconds
+21:40:01  On list_finbest_mart: ROLLBACK
+21:40:01  On list_finbest_mart: Close
+21:40:01  Using postgres connection "master"
+21:40:01  On master: BEGIN
+21:40:01  Opening a new connection, currently in state init
+21:40:01  SQL status: BEGIN in 0.0 seconds
+21:40:01  Using postgres connection "master"
+21:40:01  On master: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+21:40:01  SQL status: SELECT 0 in 0.0 seconds
+21:40:01  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d58921fed90>]}
+21:40:01  On master: ROLLBACK
+21:40:01  Using postgres connection "master"
+21:40:01  On master: BEGIN
+21:40:01  SQL status: BEGIN in 0.0 seconds
+21:40:01  On master: COMMIT
+21:40:01  Using postgres connection "master"
+21:40:01  On master: COMMIT
+21:40:01  SQL status: COMMIT in 0.0 seconds
+21:40:01  On master: Close
+21:40:01  Concurrency: 4 threads (target='dev')
+21:40:01  
+21:40:01  Began running node model.finbest.stg_clients
+21:40:01  Began running node model.finbest.stg_rates
+21:40:01  Began running node model.finbest.stg_transactions
+21:40:01  1 of 5 START sql table model mart.stg_clients .................................. [RUN]
+21:40:01  2 of 5 START sql table model mart.stg_rates .................................... [RUN]
+21:40:01  3 of 5 START sql table model mart.stg_transactions ............................. [RUN]
+21:40:01  Re-using an available connection from the pool (formerly list_finbest_mart, now model.finbest.stg_clients)
+21:40:01  Re-using an available connection from the pool (formerly list_finbest, now model.finbest.stg_rates)
+21:40:01  Acquiring new postgres connection 'model.finbest.stg_transactions'
+21:40:01  Began compiling node model.finbest.stg_clients
+21:40:01  Began compiling node model.finbest.stg_rates
+21:40:01  Began compiling node model.finbest.stg_transactions
+21:40:01  Writing injected SQL for node "model.finbest.stg_clients"
+21:40:01  Writing injected SQL for node "model.finbest.stg_rates"
+21:40:01  Writing injected SQL for node "model.finbest.stg_transactions"
+21:40:01  Timing info for model.finbest.stg_clients (compile): 21:40:01.808751 => 21:40:01.818279
+21:40:01  Timing info for model.finbest.stg_rates (compile): 21:40:01.814765 => 21:40:01.818785
+21:40:01  Began executing node model.finbest.stg_clients
+21:40:01  Timing info for model.finbest.stg_transactions (compile): 21:40:01.816480 => 21:40:01.819607
+21:40:01  Began executing node model.finbest.stg_rates
+21:40:01  Began executing node model.finbest.stg_transactions
+21:40:01  Writing runtime sql for node "model.finbest.stg_rates"
+21:40:01  Writing runtime sql for node "model.finbest.stg_transactions"
+21:40:01  Writing runtime sql for node "model.finbest.stg_clients"
+21:40:01  Using postgres connection "model.finbest.stg_rates"
+21:40:01  Using postgres connection "model.finbest.stg_transactions"
+21:40:01  On model.finbest.stg_rates: BEGIN
+21:40:01  Using postgres connection "model.finbest.stg_clients"
+21:40:01  On model.finbest.stg_transactions: BEGIN
+21:40:01  Opening a new connection, currently in state closed
+21:40:01  On model.finbest.stg_clients: BEGIN
+21:40:01  Opening a new connection, currently in state init
+21:40:01  Opening a new connection, currently in state closed
+21:40:01  SQL status: BEGIN in 0.0 seconds
+21:40:01  Using postgres connection "model.finbest.stg_rates"
+21:40:01  On model.finbest.stg_rates: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_rates"} */
+
+  
+    
+
+  create  table "finbest"."mart"."stg_rates__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select * from staging.currency_rates
+  );
+  
+21:40:01  SQL status: BEGIN in 0.0 seconds
+21:40:01  SQL status: BEGIN in 0.0 seconds
+21:40:01  Using postgres connection "model.finbest.stg_transactions"
+21:40:01  Using postgres connection "model.finbest.stg_clients"
+21:40:01  On model.finbest.stg_transactions: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_transactions"} */
+
+  
+    
+
+  create  table "finbest"."mart"."stg_transactions__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select * from raw.masked_transactions
+  );
+  
+21:40:01  On model.finbest.stg_clients: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_clients"} */
+
+  
+    
+
+  create  table "finbest"."mart"."stg_clients__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select * from raw.masked_clients
+  );
+  
+21:40:01  SQL status: SELECT 16 in 0.0 seconds
+21:40:01  Using postgres connection "model.finbest.stg_rates"
+21:40:01  SQL status: SELECT 1200 in 0.0 seconds
+21:40:01  On model.finbest.stg_rates: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_rates"} */
+alter table "finbest"."mart"."stg_rates" rename to "stg_rates__dbt_backup"
+21:40:01  Using postgres connection "model.finbest.stg_clients"
+21:40:01  On model.finbest.stg_clients: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_clients"} */
+alter table "finbest"."mart"."stg_clients" rename to "stg_clients__dbt_backup"
+21:40:01  SQL status: ALTER TABLE in 0.0 seconds
+21:40:01  SQL status: ALTER TABLE in 0.0 seconds
+21:40:01  Using postgres connection "model.finbest.stg_rates"
+21:40:01  Using postgres connection "model.finbest.stg_clients"
+21:40:01  On model.finbest.stg_rates: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_rates"} */
+alter table "finbest"."mart"."stg_rates__dbt_tmp" rename to "stg_rates"
+21:40:01  On model.finbest.stg_clients: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_clients"} */
+alter table "finbest"."mart"."stg_clients__dbt_tmp" rename to "stg_clients"
+21:40:01  SQL status: ALTER TABLE in 0.0 seconds
+21:40:01  SQL status: ALTER TABLE in 0.0 seconds
+21:40:01  SQL status: SELECT 4652 in 0.0 seconds
+21:40:01  On model.finbest.stg_rates: COMMIT
+21:40:01  On model.finbest.stg_clients: COMMIT
+21:40:01  Using postgres connection "model.finbest.stg_transactions"
+21:40:01  Using postgres connection "model.finbest.stg_rates"
+21:40:01  Using postgres connection "model.finbest.stg_clients"
+21:40:01  On model.finbest.stg_transactions: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_transactions"} */
+alter table "finbest"."mart"."stg_transactions" rename to "stg_transactions__dbt_backup"
+21:40:01  On model.finbest.stg_rates: COMMIT
+21:40:01  On model.finbest.stg_clients: COMMIT
+21:40:01  SQL status: ALTER TABLE in 0.0 seconds
+21:40:01  Using postgres connection "model.finbest.stg_transactions"
+21:40:01  SQL status: COMMIT in 0.0 seconds
+21:40:01  SQL status: COMMIT in 0.0 seconds
+21:40:01  On model.finbest.stg_transactions: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_transactions"} */
+alter table "finbest"."mart"."stg_transactions__dbt_tmp" rename to "stg_transactions"
+21:40:01  Using postgres connection "model.finbest.stg_rates"
+21:40:01  Using postgres connection "model.finbest.stg_clients"
+21:40:01  On model.finbest.stg_rates: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_rates"} */
+drop table if exists "finbest"."mart"."stg_rates__dbt_backup" cascade
+21:40:01  SQL status: ALTER TABLE in 0.0 seconds
+21:40:01  On model.finbest.stg_clients: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_clients"} */
+drop table if exists "finbest"."mart"."stg_clients__dbt_backup" cascade
+21:40:01  On model.finbest.stg_transactions: COMMIT
+21:40:01  Using postgres connection "model.finbest.stg_transactions"
+21:40:01  On model.finbest.stg_transactions: COMMIT
+21:40:01  SQL status: DROP TABLE in 0.0 seconds
+21:40:01  Timing info for model.finbest.stg_rates (execute): 21:40:01.846666 => 21:40:01.976589
+21:40:01  SQL status: COMMIT in 0.0 seconds
+21:40:01  On model.finbest.stg_rates: Close
+21:40:01  SQL status: DROP TABLE in 0.0 seconds
+21:40:01  Using postgres connection "model.finbest.stg_transactions"
+21:40:01  Timing info for model.finbest.stg_clients (execute): 21:40:01.820627 => 21:40:01.981737
+21:40:01  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5891034070>]}
+21:40:01  On model.finbest.stg_transactions: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.stg_transactions"} */
+drop table if exists "finbest"."mart"."stg_transactions__dbt_backup" cascade
+21:40:01  On model.finbest.stg_clients: Close
+21:40:01  2 of 5 OK created sql table model mart.stg_rates ............................... [SELECT 16 in 0.18s]
+21:40:01  Finished running node model.finbest.stg_rates
+21:40:01  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5891018130>]}
+21:40:01  1 of 5 OK created sql table model mart.stg_clients ............................. [SELECT 1200 in 0.18s]
+21:40:01  Finished running node model.finbest.stg_clients
+21:40:01  SQL status: DROP TABLE in 0.0 seconds
+21:40:01  Timing info for model.finbest.stg_transactions (execute): 21:40:01.869705 => 21:40:01.989989
+21:40:01  On model.finbest.stg_transactions: Close
+21:40:01  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d58910100d0>]}
+21:40:01  3 of 5 OK created sql table model mart.stg_transactions ........................ [SELECT 4652 in 0.18s]
+21:40:01  Finished running node model.finbest.stg_transactions
+21:40:01  Began running node model.finbest.int_daily_transactions
+21:40:01  4 of 5 START sql table model mart.int_daily_transactions ....................... [RUN]
+21:40:01  Acquiring new postgres connection 'model.finbest.int_daily_transactions'
+21:40:01  Began compiling node model.finbest.int_daily_transactions
+21:40:01  Writing injected SQL for node "model.finbest.int_daily_transactions"
+21:40:01  Timing info for model.finbest.int_daily_transactions (compile): 21:40:01.995188 => 21:40:01.998008
+21:40:01  Began executing node model.finbest.int_daily_transactions
+21:40:02  Writing runtime sql for node "model.finbest.int_daily_transactions"
+21:40:02  Using postgres connection "model.finbest.int_daily_transactions"
+21:40:02  On model.finbest.int_daily_transactions: BEGIN
+21:40:02  Opening a new connection, currently in state init
+21:40:02  SQL status: BEGIN in 0.0 seconds
+21:40:02  Using postgres connection "model.finbest.int_daily_transactions"
+21:40:02  On model.finbest.int_daily_transactions: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.int_daily_transactions"} */
+
+  
+    
+
+  create  table "finbest"."mart"."int_daily_transactions__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with t as (
+  select date(datetime) as dt, client_id, currency,
+         sum(case when transaction_type='deposit' then amount end) as inflow,
+         sum(case when transaction_type='withdrawal' then amount end) as outflow,
+         count(*) as tx_cnt
+  from "finbest"."mart"."stg_transactions"
+  group by 1,2,3)
+select *, inflow-outflow as net_flow from t
+  );
+  
+21:40:02  SQL status: SELECT 3509 in 0.0 seconds
+21:40:02  Using postgres connection "model.finbest.int_daily_transactions"
+21:40:02  On model.finbest.int_daily_transactions: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.int_daily_transactions"} */
+alter table "finbest"."mart"."int_daily_transactions" rename to "int_daily_transactions__dbt_backup"
+21:40:02  SQL status: ALTER TABLE in 0.0 seconds
+21:40:02  Using postgres connection "model.finbest.int_daily_transactions"
+21:40:02  On model.finbest.int_daily_transactions: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.int_daily_transactions"} */
+alter table "finbest"."mart"."int_daily_transactions__dbt_tmp" rename to "int_daily_transactions"
+21:40:02  SQL status: ALTER TABLE in 0.0 seconds
+21:40:02  On model.finbest.int_daily_transactions: COMMIT
+21:40:02  Using postgres connection "model.finbest.int_daily_transactions"
+21:40:02  On model.finbest.int_daily_transactions: COMMIT
+21:40:02  SQL status: COMMIT in 0.0 seconds
+21:40:02  Using postgres connection "model.finbest.int_daily_transactions"
+21:40:02  On model.finbest.int_daily_transactions: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.int_daily_transactions"} */
+drop table if exists "finbest"."mart"."int_daily_transactions__dbt_backup" cascade
+21:40:02  SQL status: DROP TABLE in 0.0 seconds
+21:40:02  Timing info for model.finbest.int_daily_transactions (execute): 21:40:01.998856 => 21:40:02.043116
+21:40:02  On model.finbest.int_daily_transactions: Close
+21:40:02  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d58910df790>]}
+21:40:02  4 of 5 OK created sql table model mart.int_daily_transactions .................. [SELECT 3509 in 0.05s]
+21:40:02  Finished running node model.finbest.int_daily_transactions
+21:40:02  Began running node model.finbest.fact_client_balance
+21:40:02  5 of 5 START sql table model mart.fact_client_balance .......................... [RUN]
+21:40:02  Re-using an available connection from the pool (formerly model.finbest.stg_clients, now model.finbest.fact_client_balance)
+21:40:02  Began compiling node model.finbest.fact_client_balance
+21:40:02  Writing injected SQL for node "model.finbest.fact_client_balance"
+21:40:02  Timing info for model.finbest.fact_client_balance (compile): 21:40:02.048162 => 21:40:02.050868
+21:40:02  Began executing node model.finbest.fact_client_balance
+21:40:02  Writing runtime sql for node "model.finbest.fact_client_balance"
+21:40:02  Using postgres connection "model.finbest.fact_client_balance"
+21:40:02  On model.finbest.fact_client_balance: BEGIN
+21:40:02  Opening a new connection, currently in state closed
+21:40:02  SQL status: BEGIN in 0.0 seconds
+21:40:02  Using postgres connection "model.finbest.fact_client_balance"
+21:40:02  On model.finbest.fact_client_balance: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.fact_client_balance"} */
+
+  
+    
+
+  create  table "finbest"."mart"."fact_client_balance__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select dt as date, client_id, currency,
+       sum(net_flow) over (partition by client_id,currency
+                           order by dt
+                           rows between unbounded preceding and 1 preceding) as opening_balance,
+       sum(net_flow) over (partition by client_id,currency
+                           order by dt) as closing_balance,
+       inflow,outflow,tx_cnt as transaction_count
+from "finbest"."mart"."int_daily_transactions"
+  );
+  
+21:40:02  SQL status: SELECT 3509 in 0.0 seconds
+21:40:02  Using postgres connection "model.finbest.fact_client_balance"
+21:40:02  On model.finbest.fact_client_balance: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.fact_client_balance"} */
+alter table "finbest"."mart"."fact_client_balance" rename to "fact_client_balance__dbt_backup"
+21:40:02  SQL status: ALTER TABLE in 0.0 seconds
+21:40:02  Using postgres connection "model.finbest.fact_client_balance"
+21:40:02  On model.finbest.fact_client_balance: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.fact_client_balance"} */
+alter table "finbest"."mart"."fact_client_balance__dbt_tmp" rename to "fact_client_balance"
+21:40:02  SQL status: ALTER TABLE in 0.0 seconds
+21:40:02  On model.finbest.fact_client_balance: COMMIT
+21:40:02  Using postgres connection "model.finbest.fact_client_balance"
+21:40:02  On model.finbest.fact_client_balance: COMMIT
+21:40:02  SQL status: COMMIT in 0.0 seconds
+21:40:02  Using postgres connection "model.finbest.fact_client_balance"
+21:40:02  On model.finbest.fact_client_balance: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "finbest", "target_name": "dev", "node_id": "model.finbest.fact_client_balance"} */
+drop table if exists "finbest"."mart"."fact_client_balance__dbt_backup" cascade
+21:40:02  SQL status: DROP TABLE in 0.0 seconds
+21:40:02  Timing info for model.finbest.fact_client_balance (execute): 21:40:02.051799 => 21:40:02.096273
+21:40:02  On model.finbest.fact_client_balance: Close
+21:40:02  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b78ff990-b2ea-4d8d-97f5-4c0c0ae106f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d589100d550>]}
+21:40:02  5 of 5 OK created sql table model mart.fact_client_balance ..................... [SELECT 3509 in 0.05s]
+21:40:02  Finished running node model.finbest.fact_client_balance
+21:40:02  Using postgres connection "master"
+21:40:02  On master: BEGIN
+21:40:02  Opening a new connection, currently in state closed
+21:40:02  SQL status: BEGIN in 0.0 seconds
+21:40:02  On master: COMMIT
+21:40:02  Using postgres connection "master"
+21:40:02  On master: COMMIT
+21:40:02  SQL status: COMMIT in 0.0 seconds
+21:40:02  On master: Close
+21:40:02  Connection 'master' was properly closed.
+21:40:02  Connection 'model.finbest.stg_rates' was properly closed.
+21:40:02  Connection 'model.finbest.fact_client_balance' was properly closed.
+21:40:02  Connection 'model.finbest.stg_transactions' was properly closed.
+21:40:02  Connection 'model.finbest.int_daily_transactions' was properly closed.
+21:40:02  
+21:40:02  Finished running 5 table models in 0 hours 0 minutes and 0.40 seconds (0.40s).
+21:40:02  Command end result
+21:40:02  
+21:40:02  Completed successfully
+21:40:02  
+21:40:02  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+21:40:02  Command `dbt run` succeeded at 21:40:02.118141 after 0.55 seconds
+21:40:02  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5895a77070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5893b26be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d5891131640>]}
+21:40:02  Flushing usage events
+[2025-05-09T21:40:03.789+0000] {logging_mixin.py:150} INFO - STDERR:
+[2025-05-09T21:40:03.789+0000] {python.py:183} INFO - Done. Returned value was: 0
+[2025-05-09T21:40:03.811+0000] {taskinstance.py:1345} INFO - Marking task as SUCCESS. dag_id=transform, task_id=dbt_run, execution_date=20250509T213956, start_date=20250509T213959, end_date=20250509T214003
+[2025-05-09T21:40:03.836+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-05-09T21:40:03.856+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

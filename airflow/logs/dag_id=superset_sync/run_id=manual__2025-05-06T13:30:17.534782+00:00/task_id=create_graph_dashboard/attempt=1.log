@@ -1,0 +1,19 @@
+[2025-05-06T13:30:29.744+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: superset_sync.create_graph_dashboard manual__2025-05-06T13:30:17.534782+00:00 [queued]>
+[2025-05-06T13:30:29.749+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: superset_sync.create_graph_dashboard manual__2025-05-06T13:30:17.534782+00:00 [queued]>
+[2025-05-06T13:30:29.749+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-05-06T13:30:29.758+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): create_graph_dashboard> on 2025-05-06 13:30:17.534782+00:00
+[2025-05-06T13:30:29.761+0000] {standard_task_runner.py:57} INFO - Started process 3217 to run task
+[2025-05-06T13:30:29.763+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'superset_sync', 'create_graph_dashboard', 'manual__2025-05-06T13:30:17.534782+00:00', '--job-id', '215', '--raw', '--subdir', 'DAGS_FOLDER/superset_sync.py', '--cfg-path', '/tmp/tmpcqnxpq7a']
+[2025-05-06T13:30:29.763+0000] {standard_task_runner.py:85} INFO - Job 215: Subtask create_graph_dashboard
+[2025-05-06T13:30:29.774+0000] {logging_mixin.py:150} WARNING - /home/airflow/.local/lib/python3.8/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-06T13:30:29.797+0000] {task_command.py:410} INFO - Running <TaskInstance: superset_sync.create_graph_dashboard manual__2025-05-06T13:30:17.534782+00:00 [running]> on host 016737cbcc7e
+[2025-05-06T13:30:29.856+0000] {taskinstance.py:1545} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='superset_sync' AIRFLOW_CTX_TASK_ID='create_graph_dashboard' AIRFLOW_CTX_EXECUTION_DATE='2025-05-06T13:30:17.534782+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-06T13:30:17.534782+00:00'
+[2025-05-06T13:30:30.283+0000] {superset_sync.py:189} INFO - ✔ создан датасет fact_graph_analytics (id=2)
+[2025-05-06T13:30:30.429+0000] {superset_sync.py:228} INFO - ✔ создан чарт 'Распределение клиентов по сообществам'
+[2025-05-06T13:30:30.483+0000] {superset_sync.py:265} INFO - ✔ создан чарт 'Топ-10 влиятельных клиентов'
+[2025-05-06T13:30:30.540+0000] {superset_sync.py:302} INFO - ✔ создан чарт 'Средняя сумма транзакции по сообществам'
+[2025-05-06T13:30:30.610+0000] {superset_sync.py:317} INFO - ✔ создан дашборд 'FinBest Graph Analytics'
+[2025-05-06T13:30:30.610+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-05-06T13:30:30.618+0000] {taskinstance.py:1345} INFO - Marking task as SUCCESS. dag_id=superset_sync, task_id=create_graph_dashboard, execution_date=20250506T133017, start_date=20250506T133029, end_date=20250506T133030
+[2025-05-06T13:30:30.657+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-05-06T13:30:30.683+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

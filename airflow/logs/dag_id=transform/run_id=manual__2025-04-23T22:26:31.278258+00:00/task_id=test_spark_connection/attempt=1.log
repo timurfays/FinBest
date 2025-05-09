@@ -1,0 +1,16 @@
+[2025-04-23T22:26:46.534+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: transform.test_spark_connection manual__2025-04-23T22:26:31.278258+00:00 [queued]>
+[2025-04-23T22:26:46.542+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: transform.test_spark_connection manual__2025-04-23T22:26:31.278258+00:00 [queued]>
+[2025-04-23T22:26:46.542+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-04-23T22:26:46.553+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): test_spark_connection> on 2025-04-23 22:26:31.278258+00:00
+[2025-04-23T22:26:46.557+0000] {standard_task_runner.py:57} INFO - Started process 127 to run task
+[2025-04-23T22:26:46.559+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'transform', 'test_spark_connection', 'manual__2025-04-23T22:26:31.278258+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/transform.py', '--cfg-path', '/tmp/tmp0zqgagdt']
+[2025-04-23T22:26:46.560+0000] {standard_task_runner.py:85} INFO - Job 18: Subtask test_spark_connection
+[2025-04-23T22:26:46.607+0000] {task_command.py:410} INFO - Running <TaskInstance: transform.test_spark_connection manual__2025-04-23T22:26:31.278258+00:00 [running]> on host 46cacde71305
+[2025-04-23T22:26:46.762+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='transform' AIRFLOW_CTX_TASK_ID='test_spark_connection' AIRFLOW_CTX_EXECUTION_DATE='2025-04-23T22:26:31.278258+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-23T22:26:31.278258+00:00'
+[2025-04-23T22:26:46.771+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2025-04-23T22:26:46.771+0000] {logging_mixin.py:150} INFO - Пробую подключиться к Spark Master: spark-master:7077
+[2025-04-23T22:26:46.772+0000] {logging_mixin.py:150} INFO - Соединение с Spark Master успешно установлено
+[2025-04-23T22:26:46.772+0000] {python.py:183} INFO - Done. Returned value was: True
+[2025-04-23T22:26:46.794+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=transform, task_id=test_spark_connection, execution_date=20250423T222631, start_date=20250423T222646, end_date=20250423T222646
+[2025-04-23T22:26:46.811+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-04-23T22:26:46.902+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

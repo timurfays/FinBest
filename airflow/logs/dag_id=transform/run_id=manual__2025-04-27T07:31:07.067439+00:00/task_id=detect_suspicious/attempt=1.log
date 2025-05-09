@@ -1,0 +1,111 @@
+[2025-04-27T07:31:15.971+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: transform.detect_suspicious manual__2025-04-27T07:31:07.067439+00:00 [queued]>
+[2025-04-27T07:31:15.977+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: transform.detect_suspicious manual__2025-04-27T07:31:07.067439+00:00 [queued]>
+[2025-04-27T07:31:15.978+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-04-27T07:31:15.987+0000] {taskinstance.py:1327} INFO - Executing <Task(SparkSubmitOperator): detect_suspicious> on 2025-04-27 07:31:07.067439+00:00
+[2025-04-27T07:31:15.991+0000] {standard_task_runner.py:57} INFO - Started process 5062 to run task
+[2025-04-27T07:31:15.993+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'transform', 'detect_suspicious', 'manual__2025-04-27T07:31:07.067439+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/transform.py', '--cfg-path', '/tmp/tmpkkfpd6v7']
+[2025-04-27T07:31:15.994+0000] {standard_task_runner.py:85} INFO - Job 13: Subtask detect_suspicious
+[2025-04-27T07:31:16.033+0000] {task_command.py:410} INFO - Running <TaskInstance: transform.detect_suspicious manual__2025-04-27T07:31:07.067439+00:00 [running]> on host c82426b22b9f
+[2025-04-27T07:31:16.165+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='transform' AIRFLOW_CTX_TASK_ID='detect_suspicious' AIRFLOW_CTX_EXECUTION_DATE='2025-04-27T07:31:07.067439+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-27T07:31:07.067439+00:00'
+[2025-04-27T07:31:16.173+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2025-04-27T07:31:16.173+0000] {spark_submit.py:339} INFO - Spark-Submit cmd: spark-submit --master spark://spark-master:7077 --executor-cores 2 --executor-memory 2g --driver-memory 1g --name arrow-spark /opt/airflow/spark/detect_suspicious.py --jdbc jdbc:postgresql://postgres:5432/finbest --clickhouse-url jdbc:clickhouse://clickhouse:8123/finbest
+[2025-04-27T07:31:17.989+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:17 INFO SparkContext: Running Spark version 3.3.0
+[2025-04-27T07:31:18.051+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-04-27T07:31:18.143+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO ResourceUtils: ==============================================================
+[2025-04-27T07:31:18.143+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2025-04-27T07:31:18.143+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO ResourceUtils: ==============================================================
+[2025-04-27T07:31:18.144+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO SparkContext: Submitted application: FinBestDetect
+[2025-04-27T07:31:18.165+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 2, script: , vendor: , memory -> name: memory, amount: 2048, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2025-04-27T07:31:18.177+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO ResourceProfile: Limiting resource is cpus at 2 tasks per executor
+[2025-04-27T07:31:18.178+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2025-04-27T07:31:18.221+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO SecurityManager: Changing view acls to: airflow
+[2025-04-27T07:31:18.221+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO SecurityManager: Changing modify acls to: airflow
+[2025-04-27T07:31:18.221+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO SecurityManager: Changing view acls groups to:
+[2025-04-27T07:31:18.222+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO SecurityManager: Changing modify acls groups to:
+[2025-04-27T07:31:18.222+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(airflow); groups with view permissions: Set(); users  with modify permissions: Set(airflow); groups with modify permissions: Set()
+[2025-04-27T07:31:18.443+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO Utils: Successfully started service 'sparkDriver' on port 35863.
+[2025-04-27T07:31:18.465+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO SparkEnv: Registering MapOutputTracker
+[2025-04-27T07:31:18.492+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO SparkEnv: Registering BlockManagerMaster
+[2025-04-27T07:31:18.507+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2025-04-27T07:31:18.507+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2025-04-27T07:31:18.510+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2025-04-27T07:31:18.529+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-b540832d-5ecb-49e1-b330-cfa90d6cdfe8
+[2025-04-27T07:31:18.543+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2025-04-27T07:31:18.556+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO SparkEnv: Registering OutputCommitCoordinator
+[2025-04-27T07:31:18.717+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2025-04-27T07:31:18.804+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+[2025-04-27T07:31:18.837+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO TransportClientFactory: Successfully created connection to spark-master/172.18.0.2:7077 after 19 ms (0 ms spent in bootstraps)
+[2025-04-27T07:31:18.897+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20250427073118-0002
+[2025-04-27T07:31:18.902+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45577.
+[2025-04-27T07:31:18.902+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO NettyBlockTransferService: Server created on c82426b22b9f:45577
+[2025-04-27T07:31:18.903+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2025-04-27T07:31:18.908+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, c82426b22b9f, 45577, None)
+[2025-04-27T07:31:18.911+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO BlockManagerMasterEndpoint: Registering block manager c82426b22b9f:45577 with 434.4 MiB RAM, BlockManagerId(driver, c82426b22b9f, 45577, None)
+[2025-04-27T07:31:18.913+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, c82426b22b9f, 45577, None)
+[2025-04-27T07:31:18.913+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:18 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, c82426b22b9f, 45577, None)
+[2025-04-27T07:31:19.048+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2025-04-27T07:31:19.221+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2025-04-27T07:31:19.228+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO SharedState: Warehouse path is 'file:/opt/airflow/spark-warehouse'.
+[2025-04-27T07:31:19.883+0000] {spark_submit.py:490} INFO - Traceback (most recent call last):
+[2025-04-27T07:31:19.883+0000] {spark_submit.py:490} INFO - File "/opt/airflow/spark/detect_suspicious.py", line 23, in <module>
+[2025-04-27T07:31:19.883+0000] {spark_submit.py:490} INFO - .option("password", "***") \
+[2025-04-27T07:31:19.883+0000] {spark_submit.py:490} INFO - File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 184, in load
+[2025-04-27T07:31:19.883+0000] {spark_submit.py:490} INFO - File "/opt/spark/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2025-04-27T07:31:19.883+0000] {spark_submit.py:490} INFO - File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 190, in deco
+[2025-04-27T07:31:19.884+0000] {spark_submit.py:490} INFO - File "/opt/spark/python/lib/py4j-0.10.9.5-src.zip/py4j/protocol.py", line 328, in get_return_value
+[2025-04-27T07:31:19.884+0000] {spark_submit.py:490} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o33.load.
+[2025-04-27T07:31:19.884+0000] {spark_submit.py:490} INFO - : java.lang.ClassNotFoundException: org.postgresql.Driver
+[2025-04-27T07:31:19.884+0000] {spark_submit.py:490} INFO - at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:476)
+[2025-04-27T07:31:19.884+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:594)
+[2025-04-27T07:31:19.884+0000] {spark_submit.py:490} INFO - at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+[2025-04-27T07:31:19.884+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.execution.datasources.jdbc.DriverRegistry$.register(DriverRegistry.scala:46)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.$anonfun$driverClass$1(JDBCOptions.scala:101)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.$anonfun$driverClass$1$adapted(JDBCOptions.scala:101)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at scala.Option.foreach(Option.scala:407)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.<init>(JDBCOptions.scala:101)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.execution.datasources.jdbc.JDBCOptions.<init>(JDBCOptions.scala:39)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:34)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:350)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:228)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:210)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at scala.Option.getOrElse(Option.scala:189)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:210)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:171)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2025-04-27T07:31:19.885+0000] {spark_submit.py:490} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2025-04-27T07:31:19.886+0000] {spark_submit.py:490} INFO - at py4j.Gateway.invoke(Gateway.java:282)
+[2025-04-27T07:31:19.886+0000] {spark_submit.py:490} INFO - at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2025-04-27T07:31:19.886+0000] {spark_submit.py:490} INFO - at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2025-04-27T07:31:19.886+0000] {spark_submit.py:490} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2025-04-27T07:31:19.886+0000] {spark_submit.py:490} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2025-04-27T07:31:19.886+0000] {spark_submit.py:490} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-04-27T07:31:19.886+0000] {spark_submit.py:490} INFO - 
+[2025-04-27T07:31:19.932+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO SparkContext: Invoking stop() from shutdown hook
+[2025-04-27T07:31:19.940+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO SparkUI: Stopped Spark web UI at http://c82426b22b9f:4040
+[2025-04-27T07:31:19.943+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO StandaloneSchedulerBackend: Shutting down all executors
+[2025-04-27T07:31:19.947+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+[2025-04-27T07:31:19.961+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2025-04-27T07:31:19.973+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO MemoryStore: MemoryStore cleared
+[2025-04-27T07:31:19.974+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO BlockManager: BlockManager stopped
+[2025-04-27T07:31:19.981+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2025-04-27T07:31:19.983+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2025-04-27T07:31:19.989+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO SparkContext: Successfully stopped SparkContext
+[2025-04-27T07:31:19.989+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO ShutdownHookManager: Shutdown hook called
+[2025-04-27T07:31:19.990+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO ShutdownHookManager: Deleting directory /tmp/spark-086cfc3f-15ee-435b-817b-d933e0aec523
+[2025-04-27T07:31:19.993+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO ShutdownHookManager: Deleting directory /tmp/spark-086cfc3f-15ee-435b-817b-d933e0aec523/pyspark-a1661382-9c8c-4440-a05a-ec4850463f4b
+[2025-04-27T07:31:19.996+0000] {spark_submit.py:490} INFO - 25/04/27 07:31:19 INFO ShutdownHookManager: Deleting directory /tmp/spark-ee7039ea-9200-4644-8273-a0029b0b68c9
+[2025-04-27T07:31:20.065+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 422, in submit
+    f"Cannot execute: {self._mask_cmd(spark_submit_cmd)}. Error code is: {returncode}."
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://spark-master:7077 --executor-cores 2 --executor-memory 2g --driver-memory 1g --name arrow-spark /opt/airflow/spark/detect_suspicious.py --jdbc jdbc:postgresql://postgres:5432/finbest --clickhouse-url jdbc:clickhouse://clickhouse:8123/finbest. Error code is: 1.
+[2025-04-27T07:31:20.069+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=transform, task_id=detect_suspicious, execution_date=20250427T073107, start_date=20250427T073115, end_date=20250427T073120
+[2025-04-27T07:31:20.080+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 13 for task detect_suspicious (Cannot execute: spark-submit --master spark://spark-master:7077 --executor-cores 2 --executor-memory 2g --driver-memory 1g --name arrow-spark /opt/airflow/spark/detect_suspicious.py --jdbc jdbc:postgresql://postgres:5432/finbest --clickhouse-url jdbc:clickhouse://clickhouse:8123/finbest. Error code is: 1.; 5062)
+[2025-04-27T07:31:20.097+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-04-27T07:31:20.121+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

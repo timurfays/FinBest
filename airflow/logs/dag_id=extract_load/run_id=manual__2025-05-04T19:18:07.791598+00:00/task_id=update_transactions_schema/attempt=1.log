@@ -1,0 +1,29 @@
+[2025-05-04T19:18:19.729+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_load.update_transactions_schema manual__2025-05-04T19:18:07.791598+00:00 [queued]>
+[2025-05-04T19:18:19.739+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_load.update_transactions_schema manual__2025-05-04T19:18:07.791598+00:00 [queued]>
+[2025-05-04T19:18:19.739+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2025-05-04T19:18:19.749+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): update_transactions_schema> on 2025-05-04 19:18:07.791598+00:00
+[2025-05-04T19:18:19.756+0000] {standard_task_runner.py:57} INFO - Started process 3186 to run task
+[2025-05-04T19:18:19.758+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'extract_load', 'update_transactions_schema', 'manual__2025-05-04T19:18:07.791598+00:00', '--job-id', '120', '--raw', '--subdir', 'DAGS_FOLDER/extract_load.py', '--cfg-path', '/tmp/tmpeicrrw3u']
+[2025-05-04T19:18:19.759+0000] {standard_task_runner.py:85} INFO - Job 120: Subtask update_transactions_schema
+[2025-05-04T19:18:19.770+0000] {logging_mixin.py:150} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-05-04T19:18:19.796+0000] {task_command.py:410} INFO - Running <TaskInstance: extract_load.update_transactions_schema manual__2025-05-04T19:18:07.791598+00:00 [running]> on host 773728ee9afd
+[2025-05-04T19:18:19.867+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='finbest' AIRFLOW_CTX_DAG_ID='extract_load' AIRFLOW_CTX_TASK_ID='update_transactions_schema' AIRFLOW_CTX_EXECUTION_DATE='2025-05-04T19:18:07.791598+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-04T19:18:07.791598+00:00'
+[2025-05-04T19:18:19.868+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+[2025-05-04T19:18:19.869+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-04T19:18:19.873+0000] {sql.py:375} INFO - Running statement: 
+    SELECT column_name 
+    FROM information_schema.columns 
+    WHERE table_schema = 'staging' AND table_name = 'transactions'
+    , parameters: None
+[2025-05-04T19:18:19.877+0000] {sql.py:384} INFO - Rows affected: 8
+[2025-05-04T19:18:19.877+0000] {logging_mixin.py:150} INFO - Текущие столбцы в БД: ['transaction_id', 'client_id', 'datetime', 'amount', 'currency', 'merchant', 'transaction_type', 'ip_address']
+[2025-05-04T19:18:19.884+0000] {logging_mixin.py:150} INFO - Столбцы в CSV: ['id', 'transaction_id', 'client_id', 'datetime', 'amount', 'currency', 'merchant', 'transaction_type', 'ip_address', 'category', 'country_code', 'region', 'device_type', 'session_id', 'channel', 'recipient_id', 'transaction_purpose']
+[2025-05-04T19:18:19.884+0000] {logging_mixin.py:150} INFO - Недостающие столбцы: ['category', 'country_code', 'region', 'device_type', 'session_id', 'channel', 'recipient_id', 'transaction_purpose']
+[2025-05-04T19:18:19.884+0000] {logging_mixin.py:150} INFO - Выполняем SQL: ALTER TABLE staging.transactions ADD COLUMN IF NOT EXISTS category VARCHAR, ADD COLUMN IF NOT EXISTS country_code VARCHAR(2), ADD COLUMN IF NOT EXISTS region VARCHAR, ADD COLUMN IF NOT EXISTS device_type VARCHAR, ADD COLUMN IF NOT EXISTS session_id VARCHAR, ADD COLUMN IF NOT EXISTS channel VARCHAR, ADD COLUMN IF NOT EXISTS recipient_id VARCHAR, ADD COLUMN IF NOT EXISTS transaction_purpose VARCHAR
+[2025-05-04T19:18:19.885+0000] {base.py:73} INFO - Using connection ID 'postgres_default' for task execution.
+[2025-05-04T19:18:19.889+0000] {sql.py:375} INFO - Running statement: ALTER TABLE staging.transactions ADD COLUMN IF NOT EXISTS category VARCHAR, ADD COLUMN IF NOT EXISTS country_code VARCHAR(2), ADD COLUMN IF NOT EXISTS region VARCHAR, ADD COLUMN IF NOT EXISTS device_type VARCHAR, ADD COLUMN IF NOT EXISTS session_id VARCHAR, ADD COLUMN IF NOT EXISTS channel VARCHAR, ADD COLUMN IF NOT EXISTS recipient_id VARCHAR, ADD COLUMN IF NOT EXISTS transaction_purpose VARCHAR, parameters: None
+[2025-05-04T19:18:19.893+0000] {logging_mixin.py:150} INFO - Схема таблицы обновлена
+[2025-05-04T19:18:19.893+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-05-04T19:18:19.901+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=extract_load, task_id=update_transactions_schema, execution_date=20250504T191807, start_date=20250504T191819, end_date=20250504T191819
+[2025-05-04T19:18:19.930+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-05-04T19:18:19.955+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check

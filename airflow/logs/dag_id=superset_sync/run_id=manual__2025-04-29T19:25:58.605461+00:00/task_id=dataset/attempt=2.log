@@ -1,0 +1,26 @@
+[2025-04-29T19:28:03.629+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: superset_sync.dataset manual__2025-04-29T19:25:58.605461+00:00 [queued]>
+[2025-04-29T19:28:03.634+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: superset_sync.dataset manual__2025-04-29T19:25:58.605461+00:00 [queued]>
+[2025-04-29T19:28:03.634+0000] {taskinstance.py:1308} INFO - Starting attempt 2 of 2
+[2025-04-29T19:28:03.644+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): dataset> on 2025-04-29 19:25:58.605461+00:00
+[2025-04-29T19:28:03.647+0000] {standard_task_runner.py:57} INFO - Started process 3680 to run task
+[2025-04-29T19:28:03.649+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'superset_sync', 'dataset', 'manual__2025-04-29T19:25:58.605461+00:00', '--job-id', '118', '--raw', '--subdir', 'DAGS_FOLDER/superset_sync.py', '--cfg-path', '/tmp/tmp3_wigfnj']
+[2025-04-29T19:28:03.650+0000] {standard_task_runner.py:85} INFO - Job 118: Subtask dataset
+[2025-04-29T19:28:03.686+0000] {task_command.py:410} INFO - Running <TaskInstance: superset_sync.dataset manual__2025-04-29T19:25:58.605461+00:00 [running]> on host 2a409c1b1489
+[2025-04-29T19:28:03.824+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='superset_sync' AIRFLOW_CTX_TASK_ID='dataset' AIRFLOW_CTX_EXECUTION_DATE='2025-04-29T19:25:58.605461+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-29T19:25:58.605461+00:00'
+[2025-04-29T19:28:04.045+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/superset_sync.py", line 104, in task_datasets
+    pg_ds = _ensure_dataset(head, _get_db_id(head, PG_DBNAME))
+  File "/opt/airflow/dags/superset_sync.py", line 82, in _ensure_dataset
+    ds = _dataset_id(head, db_id)
+  File "/opt/airflow/dags/superset_sync.py", line 75, in _dataset_id
+    params={"q": q}, headers=head, timeout=10).json()["result"]
+KeyError: 'result'
+[2025-04-29T19:28:04.053+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=superset_sync, task_id=dataset, execution_date=20250429T192558, start_date=20250429T192803, end_date=20250429T192804
+[2025-04-29T19:28:04.063+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 118 for task dataset ('result'; 3680)
+[2025-04-29T19:28:04.102+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2025-04-29T19:28:04.136+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
