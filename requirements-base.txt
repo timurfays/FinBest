@@ -1,0 +1,13 @@
+pandas
+sqlalchemy
+psycopg2-binary
+tqdm
+tabulate
+python-louvain
+networkx
+matplotlib
+seaborn
+scikit-learn
+pyarrow
+fastparquet
+boto3

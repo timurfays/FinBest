@@ -1,0 +1,18 @@
+pandas
+sqlalchemy          # <= 2.0 работает и с Superset 3.0
+psycopg2-binary
+tdqm
+tabulate
+python-louvain
+boto3
+dbt-core==1.5.11
+dbt-postgres==1.5.11
+apache-airflow-providers-postgres
+apache-airflow-providers-apache-spark
+pyspark==3.2.4
+pyarrow
+fastparquet
+matplotlib
+seaborn
+scikit-learn
+networkx

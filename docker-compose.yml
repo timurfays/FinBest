@@ -1,0 +1,162 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: finbest
+      POSTGRES_PASSWORD: finbest_password
+      POSTGRES_DB: finbest
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init-scripts/postgres:/docker-entrypoint-initdb.d
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "finbest"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - finbest-network
+      
+  spark-master:
+    build:
+      context: .
+      dockerfile: spark.Dockerfile
+    environment:
+      SPARK_MODE: master
+      PYSPARK_PYTHON: /usr/local/bin/python3.8
+      PYSPARK_DRIVER_PYTHON: /usr/local/bin/python3.8
+    ports: ["7077:7077", "8090:8080"]
+    networks:
+      - finbest-network
+
+  spark-worker:
+    build:
+      context: .
+      dockerfile: spark.Dockerfile
+    depends_on: [spark-master]
+    environment:
+      SPARK_MODE: worker
+      SPARK_MASTER_URL: spark://spark-master:7077
+      SPARK_WORKER_MEMORY: 1G
+      PYSPARK_PYTHON: /usr/local/bin/python3.8
+      PYSPARK_DRIVER_PYTHON: /usr/local/bin/python3.8
+    networks:
+      - finbest-network
+
+  airflow-webserver:
+    build: .
+    image: finbest-airflow:dev
+    environment:
+      AIRFLOW_UID: "50000"
+      AIRFLOW_GID: "50000"
+      AIRFLOW_CONN_POSTGRES_DEFAULT: "postgresql://finbest:finbest_password@postgres:5432/finbest"
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://finbest:finbest_password@postgres/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
+    depends_on:
+      postgres: { condition: service_healthy }
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./spark:/opt/airflow/spark
+      - ./data:/data
+      - ./dbt_project:/dbt_project
+      - ./notebooks:/notebooks
+      - ./reports:/reports
+    ports: ["8080:8080"]
+    command: >
+      bash -c "
+        airflow db init &&
+        airflow connections delete postgres_default 2>/dev/null || true &&
+        airflow connections add postgres_default --conn-type postgres --conn-host postgres --conn-login finbest --conn-password finbest_password --conn-port 5432 --conn-schema finbest &&
+        airflow connections delete spark_default 2>/dev/null || true &&
+        airflow connections add spark_default --conn-type spark --conn-host spark://spark-master --conn-port 7077 --conn-extra '{\"master\":\"spark://spark-master:7077\"}' &&
+        airflow users create -u admin -p admin -f Admin -l User -r Admin -e admin@finbest.io || true &&
+        exec airflow webserver
+      "
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - finbest-network
+
+  airflow-scheduler:
+    image: finbest-airflow:dev
+    depends_on: [airflow-webserver]
+    environment:
+      AIRFLOW_UID: "50000"
+      AIRFLOW_GID: "50000"
+      AIRFLOW_CONN_POSTGRES_DEFAULT: "postgresql://finbest:finbest_password@postgres:5432/finbest"
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://finbest:finbest_password@postgres/airflow
+      JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./spark:/opt/airflow/spark
+      - ./data:/data
+      - ./dbt_project:/dbt_project
+      - ./notebooks:/notebooks
+      - ./reports:/reports
+    command: >
+      bash -c "
+        airflow db init &&
+        exec airflow scheduler
+      "
+    networks:
+      - finbest-network
+
+  superset:
+    image: apache/superset:3.0.1
+    depends_on:
+      postgres: { condition: service_healthy }
+    restart: on-failure
+    environment:
+      SUPERSET_SECRET_KEY: "finbest_superset_secret"
+      WTF_CSRF_ENABLED: "False"
+    ports: ["8088:8088"]
+    volumes:
+      - ./superset:/app/superset_home
+      - ./superset/setup_superset.py:/setup_superset.py
+      - ./superset/config/superset_config.py:/app/pythonpath/superset_config.py
+    command: >
+      /bin/sh -c "
+        superset db upgrade &&
+        superset init &&
+        python /setup_superset.py &&
+        superset run -h 0.0.0.0 -p 8088
+      "
+    networks:
+      - finbest-network
+
+  jupyter:
+    build:
+      context: .
+      dockerfile: jupyter.Dockerfile
+      
+    container_name: finbest-mini-jupyter-1
+    depends_on:
+      - postgres
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work/notebooks
+      - ./reports:/home/jovyan/work/reports
+      - ./data:/home/jovyan/data
+
+    environment:
+      - JUPYTER_TOKEN=finbest
+    command: start-notebook.sh --NotebookApp.token='finbest'
+    networks:
+      - finbest-network
+
+volumes:
+  postgres-data:
+
+networks:
+  finbest-network:
+    driver: bridge  

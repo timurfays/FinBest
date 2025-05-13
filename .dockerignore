@@ -1,0 +1,4 @@
+# .dockerignore
+airflow/logs
+**/__pycache__
+*.log

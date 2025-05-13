@@ -1,0 +1,7 @@
+name: finbest
+version: 1.0
+profile: finbest
+model-paths: ["models"]
+models:
+  finbest:
+    +materialized: table
