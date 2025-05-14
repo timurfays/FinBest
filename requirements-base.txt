@@ -11,3 +11,7 @@ scikit-learn
 pyarrow
 fastparquet
 boto3
+numpy==1.24.4
+plotly==5.18.0
+pyvis==0.3.2
+jupyter
